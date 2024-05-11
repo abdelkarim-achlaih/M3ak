@@ -1,0 +1,143 @@
+// Start Import Mixins
+
+@use './helpers/_mixins' as *;
+
+// End Import Mixins
+/* Start Variables */
+
+$transitionDuration: .3s;
+$mainGradientYellow: linear-gradient(90deg, #FFAF04 -0.01%, #F98429 52%);
+
+/* End Variables */
+
+/* Start Global Rules */
+body {
+  // font-family: ;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+*::selection {
+  // color: $back2;
+  // background-color: $main;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding-right: 0;
+}
+
+.container-fluid {
+  @include breakpoints('xxl') {
+    max-width: 1800px;
+  }
+}
+
+/* End Global Rules */
+
+/* Start Components */
+.center-xy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.test {
+  border: 1px solid red;
+}
+
+/* End Components */
+
+/* Start Header */
+header {
+  padding-top: 53px;
+  padding-bottom: 53px;
+
+  .container-fluid {
+
+    .navbar-brand {
+      img {
+        max-width: 167px;
+      }
+    }
+
+    .navigation {
+      a {
+        color: rgba(108, 108, 108, 1);
+        // font-size: 24px;
+        @include font-size(24px);
+        transition: $transitionDuration;
+        position: relative;
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: -7px;
+          right: 15px;
+          height: 6px;
+          background-image: $mainGradientYellow;
+          width: 0;
+          border-radius: 56px;
+          transition: $transitionDuration;
+        }
+
+        &:hover,
+        &.active {
+          font-weight: bold;
+          color: rgba(33, 41, 54, 1);
+
+          &::after {
+            width: 25%;
+
+          }
+        }
+      }
+    }
+
+    .socials {
+      button {
+        background-image: none;
+        background-color: rgba(22, 24, 27, 1);
+        color: white;
+        font-weight: 600;
+        // font-size: 24px;
+        @include font-size(24px);
+        padding: 23px 21px 23px 21px;
+        transition: $transitionDuration;
+
+        &:hover {
+          background-image: $mainGradientYellow;
+          background-color: none;
+        }
+      }
+
+      .nav-link {
+        width: 48px;
+        height: 48px;
+        background-color: transparent;
+        background-image: $mainGradientYellow;
+        border-radius: 50%;
+        transition: $transitionDuration;
+
+        &:hover {
+          background-color: black;
+          background-image: none;
+        }
+
+        svg {
+          font-size: 22px;
+          @include font-size(22px);
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+/* End Header */

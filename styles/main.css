@@ -1,1 +1,126 @@
-/*# sourceMappingURL=main.css.map */
+/* Start Variables */
+/* End Variables */
+/* Start Global Rules */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding-right: 0;
+}
+
+@media (min-width: 1400px) {
+  .container-fluid {
+    max-width: 1800px;
+  }
+}
+
+/* End Global Rules */
+/* Start Components */
+.center-xy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.test {
+  border: 1px solid red;
+}
+
+/* End Components */
+/* Start Header */
+header {
+  padding-top: 53px;
+  padding-bottom: 53px;
+}
+header .container-fluid .navbar-brand img {
+  max-width: 167px;
+}
+header .container-fluid .navigation a {
+  color: rgb(108, 108, 108);
+  transition: 0.3s;
+  position: relative;
+}
+@media (min-width: 1400px) {
+  header .container-fluid .navigation a {
+    font-size: 24px;
+  }
+}
+@media (max-width: 1399px) {
+  header .container-fluid .navigation a {
+    font-size: calc(24px - 0.45vw);
+  }
+}
+header .container-fluid .navigation a::after {
+  content: "";
+  position: absolute;
+  bottom: -7px;
+  right: 15px;
+  height: 6px;
+  background-image: linear-gradient(90deg, #FFAF04 -0.01%, #F98429 52%);
+  width: 0;
+  border-radius: 56px;
+  transition: 0.3s;
+}
+header .container-fluid .navigation a:hover, header .container-fluid .navigation a.active {
+  font-weight: bold;
+  color: rgb(33, 41, 54);
+}
+header .container-fluid .navigation a:hover::after, header .container-fluid .navigation a.active::after {
+  width: 25%;
+}
+header .container-fluid .socials button {
+  background-image: none;
+  background-color: rgb(22, 24, 27);
+  color: white;
+  font-weight: 600;
+  padding: 23px 21px 23px 21px;
+  transition: 0.3s;
+}
+@media (min-width: 1400px) {
+  header .container-fluid .socials button {
+    font-size: 24px;
+  }
+}
+@media (max-width: 1399px) {
+  header .container-fluid .socials button {
+    font-size: calc(24px - 0.45vw);
+  }
+}
+header .container-fluid .socials button:hover {
+  background-image: linear-gradient(90deg, #FFAF04 -0.01%, #F98429 52%);
+  background-color: none;
+}
+header .container-fluid .socials .nav-link {
+  width: 48px;
+  height: 48px;
+  background-color: transparent;
+  background-image: linear-gradient(90deg, #FFAF04 -0.01%, #F98429 52%);
+  border-radius: 50%;
+  transition: 0.3s;
+}
+header .container-fluid .socials .nav-link:hover {
+  background-color: black;
+  background-image: none;
+}
+header .container-fluid .socials .nav-link svg {
+  font-size: 22px;
+  color: white;
+}
+@media (min-width: 1400px) {
+  header .container-fluid .socials .nav-link svg {
+    font-size: 22px;
+  }
+}
+@media (max-width: 1399px) {
+  header .container-fluid .socials .nav-link svg {
+    font-size: calc(22px - 0.45vw);
+  }
+}
+
+/* End Header *//*# sourceMappingURL=main.css.map */
