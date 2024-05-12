@@ -3,16 +3,34 @@
 @use './helpers/_mixins' as *;
 
 // End Import Mixins
+
+/* Start Importing Fonts */
+@font-face {
+  font-family: "SuisseIntl";
+  src: url("../assets/fonts/SuisseIntl-Light.otf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "SuisseIntl";
+  src: url("../assets/fonts/SuisseIntl-Bold.otf");
+  font-weight: 600;
+}
+
+/* End Importing Fonts */
+
 /* Start Variables */
 
 $transitionDuration: .3s;
 $mainGradientYellow: linear-gradient(90deg, #FFAF04 -0.01%, #F98429 52%);
+$secondGradientYellow: linear-gradient(90deg, rgba(255, 175, 4, 0.7) -0.01%, rgba(249, 132, 41, 0.7) 52%);
+;
 
 /* End Variables */
 
 /* Start Global Rules */
 body {
-  // font-family: ;
+  font-family: "SuisseIntl";
 }
 
 * {
@@ -33,10 +51,14 @@ ul {
   padding-right: 0;
 }
 
-.container-fluid {
+.container-xxl {
   @include breakpoints('xxl') {
     max-width: 1800px;
   }
+}
+
+.fw-bold {
+  font-weight: 600 !important;
 }
 
 /* End Global Rules */
@@ -52,6 +74,10 @@ ul {
   border: 1px solid red;
 }
 
+.test-blue {
+  border: 1px solid blue;
+}
+
 /* End Components */
 
 /* Start Header */
@@ -59,7 +85,7 @@ header {
   padding-top: 53px;
   padding-bottom: 53px;
 
-  .container-fluid {
+  .container-xxl {
 
     .navbar-brand {
       img {
@@ -110,6 +136,7 @@ header {
         @include font-size(24px);
         padding: 23px 21px 23px 21px;
         transition: $transitionDuration;
+        border-radius: 16px;
 
         &:hover {
           background-image: $mainGradientYellow;
@@ -141,3 +168,109 @@ header {
 }
 
 /* End Header */
+/* Start Hero */
+.hero {
+
+  .container-xxl {
+    position: relative;
+
+    .hero-bg {
+      background-image: url('../assets/img/Hero_bg.png');
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      background-position: center center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+    }
+  }
+
+  .section-container {
+    padding: 92px;
+
+    @include breakpoints("md") {
+      padding: 45px
+    }
+  }
+
+  .text-copy {
+    @include breakpoints("md") {
+      text-align: center
+    }
+
+    h1 {
+      @include font-size(40px);
+    }
+
+    &>p {
+      @include font-size(32px);
+      color: rgba(129, 129, 129, 1);
+      line-height: 150%;
+    }
+
+    .badges {
+      img {
+        max-width: 245px;
+        transition: $transitionDuration;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+
+    .features {
+      .feature {
+        text-align: center;
+
+        .feature-icon {
+          background-image: $secondGradientYellow;
+          width: 113px;
+          height: 113px;
+          border-radius: 50%;
+          margin-bottom: 30px;
+          margin-right: auto;
+          margin-left: auto;
+
+          svg {
+            font-size: 33px;
+          }
+        }
+
+        p {
+          font-weight: 600;
+          @include font-size(24px)
+        }
+      }
+    }
+  }
+
+  .left {
+    .floating-box-holder {
+      position: relative;
+
+      .floating-box {
+        width: 304px;
+        height: 304px;
+        position: absolute;
+        top: 40%;
+        left: 0;
+        transform: translate(-75%, -50%);
+        box-shadow: 0 4px 75px 0 rgba(0, 0, 0, 0.1);
+        border-radius: 31px;
+        background-color: white;
+
+        @include breakpoints("md") {
+          display: none;
+
+        }
+      }
+    }
+
+  }
+}
+
+/* End Hero */
