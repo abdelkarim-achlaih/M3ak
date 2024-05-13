@@ -48,6 +48,40 @@ ul {
   justify-content: center;
 }
 
+.section-question {
+  padding: 12px 31px;
+  color: #212936;
+  border-radius: 1000px;
+  background-color: #F4F4F4;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 25px;
+}
+@media (min-width: 1400px) {
+  .section-question {
+    font-size: 24px;
+  }
+}
+@media (max-width: 1399px) {
+  .section-question {
+    font-size: calc(24px - 0.45vw);
+  }
+}
+
+h2 {
+  line-height: 150%;
+}
+@media (min-width: 1400px) {
+  h2 {
+    font-size: 40px;
+  }
+}
+@media (max-width: 1399px) {
+  h2 {
+    font-size: calc(40px - 0.45vw);
+  }
+}
+
 .test {
   border: 1px solid red;
 }
@@ -336,4 +370,82 @@ header .container-xxl .socials .nav-link svg {
     transform: translateY(-25px);
   }
 }
-/* End Hero *//*# sourceMappingURL=main.css.map */
+/* End Hero */
+/* Start About */
+.about .text-copy ul li {
+  line-height: 28px;
+  padding: 20px 58px 20px 20px;
+  background-color: #FAFAFA;
+  margin-bottom: 16px;
+  position: relative;
+}
+@media (min-width: 1400px) {
+  .about .text-copy ul li {
+    font-size: 20px;
+  }
+}
+@media (max-width: 1399px) {
+  .about .text-copy ul li {
+    font-size: calc(20px - 0.45vw);
+  }
+}
+.about .text-copy ul li::before {
+  content: "";
+  background-image: url("../assets/img/Check.png");
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 50%;
+  right: 29px;
+  transform: translate(50%, -50%);
+}
+.about .left .col-holder {
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.about .left .col-holder .stats {
+  position: absolute;
+  bottom: 50px;
+  right: 0;
+  transform: translateX(50%);
+  background-color: #212936;
+  padding: 15px 27px;
+  border-radius: 8px;
+  color: white;
+}
+.about .left .col-holder .stats p:first-child {
+  font-weight: 600;
+}
+@media (min-width: 1400px) {
+  .about .left .col-holder .stats p:first-child {
+    font-size: 36px;
+  }
+}
+@media (max-width: 1399px) {
+  .about .left .col-holder .stats p:first-child {
+    font-size: calc(36px - 0.45vw);
+  }
+}
+@media (min-width: 1400px) {
+  .about .left .col-holder .stats p:last-child {
+    font-size: 24px;
+  }
+}
+@media (max-width: 1399px) {
+  .about .left .col-holder .stats p:last-child {
+    font-size: calc(24px - 0.45vw);
+  }
+}
+.about .left .col-holder .decoration {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 162px;
+  height: 138px;
+  border-radius: 31px 6px 24px 7px;
+  background-image: linear-gradient(90deg, #FFAF04 -0.01%, #F98429 52%);
+  z-index: -1;
+}
+
+/* End About *//*# sourceMappingURL=main.css.map */

@@ -70,6 +70,21 @@ ul {
   justify-content: center;
 }
 
+.section-question {
+  padding: 12px 31px;
+  @include font-size(24px);
+  color: #212936;
+  border-radius: 1000px;
+  background-color: #F4F4F4;
+  width: fit-content;
+  margin-bottom: 25px;
+}
+
+h2 {
+  @include font-size(40px);
+  line-height: 150%;
+}
+
 .test {
   border: 1px solid red;
 }
@@ -369,3 +384,72 @@ header {
 }
 
 /* End Hero */
+/* Start About */
+.about {
+  .text-copy {
+
+    ul {
+      li {
+        @include font-size(20px);
+        line-height: 28px;
+        padding: 20px 58px 20px 20px;
+        background-color: #FAFAFA;
+        margin-bottom: 16px;
+        position: relative;
+
+        &::before {
+          content: "";
+          background-image: url("../assets/img/Check.png");
+          width: 24px;
+          height: 24px;
+          position: absolute;
+          top: 50%;
+          right: 29px;
+          transform: translate(50%, -50%);
+        }
+      }
+    }
+  }
+
+  .left {
+
+    .col-holder {
+      position: relative;
+      width: fit-content;
+
+      .stats {
+        position: absolute;
+        bottom: 50px;
+        right: 0;
+        transform: translateX(50%);
+        background-color: #212936;
+        padding: 15px 27px;
+        border-radius: 8px;
+        color: white;
+
+        p:first-child {
+          font-weight: 600;
+          @include font-size(36px)
+        }
+
+        p:last-child {
+          @include font-size(24px)
+        }
+      }
+
+      .decoration {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 162px;
+        height: 138px;
+        border-radius: 31px 6px 24px 7px;
+        background-image: $mainGradientYellow;
+        z-index: -1;
+      }
+    }
+
+  }
+}
+
+/* End About */
