@@ -696,4 +696,29 @@ header .container-xxl .socials .nav-link svg {
   background-color: #fdf3eb;
 }
 
-/* End Services *//*# sourceMappingURL=main.css.map */
+/* End Services */
+/* Start Provider */
+.provider {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.provider .section-container {
+  background-image: url(../assets/img/Provider_BG.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.provider .text-copy {
+  padding: 73px 63px;
+}
+@media (max-width: 991px) {
+  .provider .text-copy {
+    padding: 35px 26px;
+  }
+}
+.provider h2 {
+  font-size: 48px;
+  line-height: 150%;
+}
+
+/* End Provider *//*# sourceMappingURL=main.css.map */

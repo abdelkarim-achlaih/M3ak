@@ -676,4 +676,33 @@ header {
 $classes: one, two, three, four, five, six, seven;
 
 @include set-colors($classes);
+
 /* End Services */
+
+/* Start Provider */
+.provider {
+  margin-top: 100px;
+  margin-bottom: 100px;
+
+  .section-container {
+    background-image: url(../assets/img/Provider_BG.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  .text-copy {
+    padding: 73px 63px;
+
+    @include breakpoints("md") {
+      padding: 35px 26px;
+    }
+  }
+
+  h2 {
+    font-size: 48px;
+    line-height: 150%;
+  }
+}
+
+/* End Provider */
