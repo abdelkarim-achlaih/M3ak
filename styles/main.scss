@@ -1042,14 +1042,24 @@ footer {
 .provider-cta {
   overflow: hidden;
   padding-top: 60px;
+  padding-bottom: 60px;
 
   .container-fluid {
     padding: 0;
   }
 
+  .box-shadow {
+    box-shadow: 0px 4px 75px 0px #00000040;
+  }
+
   .right {
     position: relative;
     top: -20px;
+
+    @include breakpoints('sm') {
+      top: 0;
+
+    }
 
     .holder {
       position: absolute;
@@ -1070,10 +1080,14 @@ footer {
       position: relative;
       z-index: 60;
       height: 450px;
+
+      @include breakpoints('md') {
+        z-index: 1;
+      }
     }
   }
 
-  .left {
+  .left .holder {
     background-image: url(../assets/img/provider-cta-black-bg.png);
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -1082,6 +1096,7 @@ footer {
     padding-right: 156px;
     margin-right: -220px;
     width: calc(100% + 220px);
+    position: relative;
 
     @include breakpoints('md') {
       padding-right: 60px;
@@ -1091,22 +1106,26 @@ footer {
     }
 
     @include breakpoints('sm') {
-      padding-right: unset;
-      margin-right: unset;
-      width: 100%;
+      z-index: 30;
+      padding-right: 20px;
+      margin-right: auto;
+      margin-left: auto;
+      margin-top: -150px;
+      width: 80%;
     }
 
     h2 {
       max-width: 740px;
+      line-height: 72px;
 
       @include breakpoints('md') {
-        // text-align: start;
+        text-align: start;
         font-size: 28px;
 
       }
 
       @include breakpoints('sm') {
-        // text-align: start;
+        text-align: center;
 
       }
     }

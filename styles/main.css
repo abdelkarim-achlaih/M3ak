@@ -993,14 +993,23 @@ footer .copyrights a:hover {
 .provider-cta {
   overflow: hidden;
   padding-top: 60px;
+  padding-bottom: 60px;
 }
 .provider-cta .container-fluid {
   padding: 0;
+}
+.provider-cta .box-shadow {
+  box-shadow: 0px 4px 75px 0px rgba(0, 0, 0, 0.2509803922);
 }
 .provider-cta .right {
   position: relative;
   top: -20px;
   height: 450px;
+}
+@media (max-width: 767px) {
+  .provider-cta .right {
+    top: 0;
+  }
 }
 .provider-cta .right .holder {
   position: absolute;
@@ -1019,7 +1028,12 @@ footer .copyrights a:hover {
   z-index: 60;
   height: 450px;
 }
-.provider-cta .left {
+@media (max-width: 991px) {
+  .provider-cta .right img {
+    z-index: 1;
+  }
+}
+.provider-cta .left .holder {
   background-image: url(../assets/img/provider-cta-black-bg.png);
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -1028,9 +1042,10 @@ footer .copyrights a:hover {
   padding-right: 156px;
   margin-right: -220px;
   width: calc(100% + 220px);
+  position: relative;
 }
 @media (max-width: 991px) {
-  .provider-cta .left {
+  .provider-cta .left .holder {
     padding-right: 60px;
     margin-right: -100px;
     width: calc(100% + 100px);
@@ -1038,18 +1053,29 @@ footer .copyrights a:hover {
   }
 }
 @media (max-width: 767px) {
-  .provider-cta .left {
-    padding-right: unset;
-    margin-right: unset;
-    width: 100%;
+  .provider-cta .left .holder {
+    z-index: 30;
+    padding-right: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: -150px;
+    width: 80%;
   }
 }
-.provider-cta .left h2 {
+.provider-cta .left .holder h2 {
   max-width: 740px;
+  line-height: 72px;
 }
 @media (max-width: 991px) {
-  .provider-cta .left h2 {
+  .provider-cta .left .holder h2 {
+    text-align: start;
     font-size: 28px;
   }
 }
+@media (max-width: 767px) {
+  .provider-cta .left .holder h2 {
+    text-align: center;
+  }
+}
+
 /* End provider-cta *//*# sourceMappingURL=main.css.map */
