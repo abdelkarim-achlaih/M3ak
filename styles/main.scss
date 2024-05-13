@@ -64,6 +64,44 @@ ul {
 /* End Global Rules */
 
 /* Start Components */
+button.btn,
+a.btn,
+.btn {
+  background-image: none;
+  background-color: rgba(22, 24, 27, 1);
+  color: white;
+  font-weight: 600;
+  // font-size: 24px;
+  @include font-size(24px);
+  padding: 23px 21px 23px 21px;
+  transition: $transitionDuration;
+  border-radius: 16px;
+
+  &:hover {
+    background-image: $mainGradientYellow;
+    background-color: none;
+  }
+}
+
+.btn-white {
+  background-color: white;
+  color: black;
+
+  svg {
+    color: black;
+
+  }
+
+  &:hover {
+    color: white;
+
+    svg {
+      color: white;
+
+    }
+  }
+}
+
 .center-xy {
   display: flex;
   align-items: center;
@@ -158,22 +196,6 @@ header {
     }
 
     .socials {
-      button {
-        background-image: none;
-        background-color: rgba(22, 24, 27, 1);
-        color: white;
-        font-weight: 600;
-        // font-size: 24px;
-        @include font-size(24px);
-        padding: 23px 21px 23px 21px;
-        transition: $transitionDuration;
-        border-radius: 16px;
-
-        &:hover {
-          background-image: $mainGradientYellow;
-          background-color: none;
-        }
-      }
 
       .nav-link {
         width: 48px;
@@ -379,7 +401,6 @@ header {
 
       svg {
         font-size: 35px;
-        color: black;
         animation: bounce 2s infinite 2s;
       }
     }
@@ -525,12 +546,12 @@ header {
       }
 
       p:first-child {
-        @include font-size(24px);
+        font-size: 24px;
 
       }
 
       p:last-child {
-        @include font-size(20px);
+        font-size: 20px;
         line-height: 30px;
         color: #787878;
       }
@@ -541,11 +562,118 @@ header {
         p {
           padding-right: unset;
         }
-
       }
     }
-
   }
 }
 
 /* End How */
+/* Start Services */
+@mixin set-colors($classes) {
+  @each $class in $classes {
+    $color: null;
+
+    @if $class =="one" {
+      $color: #FFE8E8;
+    }
+
+    @else if $class =="two" {
+      $color: #D3E9FF;
+    }
+
+    @else if $class =="three" {
+      $color: #AEF8CF;
+    }
+
+    @else if $class =="four" {
+      $color: #FFE4BC;
+    }
+
+    @else if $class =="five" {
+      $color: #FFE4FC;
+    }
+
+    @else if $class =="six" {
+      $color: #C8FBF4;
+    }
+
+    @else if $class =="seven" {
+      $color: #FDF3EB;
+    }
+
+    .service.#{$class} {
+      background-color: rgba($color, 0.3);
+
+      .service-icon {
+        background-color: rgba($color, 1);
+      }
+
+      &:hover {
+        background-color: rgba($color, 1);
+      }
+    }
+  }
+}
+
+.services {
+  margin-top: 100px;
+
+  h2 {
+    @include font-size(40px);
+  }
+
+  .services-holder {
+    margin-right: -175px;
+
+    @include breakpoints('md') {
+      margin-right: unset;
+
+    }
+
+    .service {
+      width: 262px;
+      height: 231px;
+      padding: 25px 19px;
+      border-radius: 32px;
+      transition-duration: $transitionDuration;
+
+      .service-icon {
+        position: relative;
+        width: 87px;
+        height: 92px;
+        border-radius: 19px;
+        padding: 16px;
+        margin-bottom: 24px;
+        right: 0;
+        transition: $transitionDuration;
+
+        svg {
+          font-size: 30px;
+        }
+      }
+
+      &:hover {
+        transform: scale(1.03);
+
+        .service-icon {
+          right: 50%;
+          transform: translateX(50%);
+        }
+      }
+
+      .service-title {
+        font-size: 24px;
+      }
+
+    }
+
+    a {
+      width: 262px;
+    }
+  }
+}
+
+$classes: one, two, three, four, five, six, seven;
+
+@include set-colors($classes);
+/* End Services */

@@ -42,6 +42,52 @@ ul {
 
 /* End Global Rules */
 /* Start Components */
+button.btn,
+a.btn,
+.btn {
+  background-image: none;
+  background-color: rgb(22, 24, 27);
+  color: white;
+  font-weight: 600;
+  padding: 23px 21px 23px 21px;
+  transition: 0.3s;
+  border-radius: 16px;
+}
+@media (min-width: 1400px) {
+  button.btn,
+  a.btn,
+  .btn {
+    font-size: 24px;
+  }
+}
+@media (max-width: 1399px) {
+  button.btn,
+  a.btn,
+  .btn {
+    font-size: calc(24px - 0.45vw);
+  }
+}
+button.btn:hover,
+a.btn:hover,
+.btn:hover {
+  background-image: linear-gradient(90deg, #FFAF04 -0.01%, #F98429 52%);
+  background-color: none;
+}
+
+.btn-white {
+  background-color: white;
+  color: black;
+}
+.btn-white svg {
+  color: black;
+}
+.btn-white:hover {
+  color: white;
+}
+.btn-white:hover svg {
+  color: white;
+}
+
 .center-xy {
   display: flex;
   align-items: center;
@@ -143,29 +189,6 @@ header .container-xxl .navigation a:hover, header .container-xxl .navigation a.a
 }
 header .container-xxl .navigation a:hover::after, header .container-xxl .navigation a.active::after {
   width: 25%;
-}
-header .container-xxl .socials button {
-  background-image: none;
-  background-color: rgb(22, 24, 27);
-  color: white;
-  font-weight: 600;
-  padding: 23px 21px 23px 21px;
-  transition: 0.3s;
-  border-radius: 16px;
-}
-@media (min-width: 1400px) {
-  header .container-xxl .socials button {
-    font-size: 24px;
-  }
-}
-@media (max-width: 1399px) {
-  header .container-xxl .socials button {
-    font-size: calc(24px - 0.45vw);
-  }
-}
-header .container-xxl .socials button:hover {
-  background-image: linear-gradient(90deg, #FFAF04 -0.01%, #F98429 52%);
-  background-color: none;
 }
 header .container-xxl .socials .nav-link {
   width: 48px;
@@ -377,7 +400,6 @@ header .container-xxl .socials .nav-link svg {
 }
 .hero .container-xxl .s-button svg {
   font-size: 35px;
-  color: black;
   animation: bounce 2s infinite 2s;
 }
 
@@ -530,29 +552,13 @@ header .container-xxl .socials .nav-link svg {
 .how .steps .step p {
   padding-right: 8px;
 }
-@media (min-width: 1400px) {
-  .how .steps .step p:first-child {
-    font-size: 24px;
-  }
-}
-@media (max-width: 1399px) {
-  .how .steps .step p:first-child {
-    font-size: calc(24px - 0.45vw);
-  }
+.how .steps .step p:first-child {
+  font-size: 24px;
 }
 .how .steps .step p:last-child {
+  font-size: 20px;
   line-height: 30px;
   color: #787878;
-}
-@media (min-width: 1400px) {
-  .how .steps .step p:last-child {
-    font-size: 20px;
-  }
-}
-@media (max-width: 1399px) {
-  .how .steps .step p:last-child {
-    font-size: calc(20px - 0.45vw);
-  }
 }
 @media (max-width: 991px) {
   .how .steps .step {
@@ -563,4 +569,131 @@ header .container-xxl .socials .nav-link svg {
   }
 }
 
-/* End How *//*# sourceMappingURL=main.css.map */
+/* End How */
+/* Start Services */
+.services {
+  margin-top: 100px;
+}
+@media (min-width: 1400px) {
+  .services h2 {
+    font-size: 40px;
+  }
+}
+@media (max-width: 1399px) {
+  .services h2 {
+    font-size: calc(40px - 0.45vw);
+  }
+}
+.services .services-holder {
+  margin-right: -175px;
+}
+@media (max-width: 991px) {
+  .services .services-holder {
+    margin-right: unset;
+  }
+}
+.services .services-holder .service {
+  width: 262px;
+  height: 231px;
+  padding: 25px 19px;
+  border-radius: 32px;
+  transition-duration: 0.3s;
+}
+.services .services-holder .service .service-icon {
+  position: relative;
+  width: 87px;
+  height: 92px;
+  border-radius: 19px;
+  padding: 16px;
+  margin-bottom: 24px;
+  right: 0;
+  transition: 0.3s;
+}
+.services .services-holder .service .service-icon svg {
+  font-size: 30px;
+}
+.services .services-holder .service:hover {
+  transform: scale(1.03);
+}
+.services .services-holder .service:hover .service-icon {
+  right: 50%;
+  transform: translateX(50%);
+}
+.services .services-holder .service .service-title {
+  font-size: 24px;
+}
+.services .services-holder a {
+  width: 262px;
+}
+
+.service.one {
+  background-color: rgba(255, 232, 232, 0.3);
+}
+.service.one .service-icon {
+  background-color: #ffe8e8;
+}
+.service.one:hover {
+  background-color: #ffe8e8;
+}
+
+.service.two {
+  background-color: rgba(211, 233, 255, 0.3);
+}
+.service.two .service-icon {
+  background-color: #d3e9ff;
+}
+.service.two:hover {
+  background-color: #d3e9ff;
+}
+
+.service.three {
+  background-color: rgba(174, 248, 207, 0.3);
+}
+.service.three .service-icon {
+  background-color: #aef8cf;
+}
+.service.three:hover {
+  background-color: #aef8cf;
+}
+
+.service.four {
+  background-color: rgba(255, 228, 188, 0.3);
+}
+.service.four .service-icon {
+  background-color: #ffe4bc;
+}
+.service.four:hover {
+  background-color: #ffe4bc;
+}
+
+.service.five {
+  background-color: rgba(255, 228, 252, 0.3);
+}
+.service.five .service-icon {
+  background-color: #ffe4fc;
+}
+.service.five:hover {
+  background-color: #ffe4fc;
+}
+
+.service.six {
+  background-color: rgba(200, 251, 244, 0.3);
+}
+.service.six .service-icon {
+  background-color: #c8fbf4;
+}
+.service.six:hover {
+  background-color: #c8fbf4;
+}
+
+.service.seven {
+  background-color: rgba(253, 243, 235, 0.3);
+}
+.service.seven .service-icon {
+  background-color: #fdf3eb;
+}
+.service.seven:hover {
+  background-color: #fdf3eb;
+}
+
+/* End Services *//*# sourceMappingURL=main.css.map */
