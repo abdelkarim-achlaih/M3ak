@@ -434,13 +434,13 @@ header .container-xxl .socials .nav-link svg {
     font-size: calc(24px - 0.45vw);
   }
 }
-.features.aboutus .feature-icon {
+.features.about .feature-icon {
   background-image: none;
   background-color: #FDE7D0;
   width: 207px;
   height: 207px;
 }
-.features.aboutus .feature-icon img {
+.features.about .feature-icon img {
   width: 50px;
 }
 
@@ -742,35 +742,37 @@ header .container-xxl .socials .nav-link svg {
   background-repeat: no-repeat;
   background-position: center center;
 }
-.provider .text-copy {
+.provider .text-copy,
+.provider .img-holder {
   padding: 73px 63px;
 }
 @media (max-width: 991px) {
-  .provider .text-copy {
-    padding: 35px 26px;
+  .provider .text-copy,
+  .provider .img-holder {
+    padding: 35px 26px 17px;
   }
 }
 .provider h2 {
   font-size: 48px;
   line-height: 150%;
 }
-.provider.aboutus {
+.provider.about, .provider.services {
   margin-top: unset;
 }
-.provider.aboutus .section-container {
+.provider.about .section-container, .provider.services .section-container {
   border-radius: 30px;
   background-image: linear-gradient(177.39deg, #FEF4EC 1.94%, rgba(254, 244, 236, 0) 97.6%);
 }
-.provider.aboutus h2 {
+.provider.about h2, .provider.services h2 {
   font-size: 40px;
 }
-.provider.aboutus h2 span {
+.provider.about h2 span, .provider.services h2 span {
   color: #FFAF04;
 }
-.provider.aboutus .badges a img {
+.provider.about .badges a img, .provider.services .badges a img {
   transition: 0.3s;
 }
-.provider.aboutus .badges a img:hover {
+.provider.about .badges a img:hover, .provider.services .badges a img:hover {
   transform: scale(1.05);
 }
 
@@ -998,13 +1000,16 @@ footer .copyrights a:hover {
 .provider-cta .container-fluid {
   padding: 0;
 }
-.provider-cta .box-shadow {
+.provider-cta .holder {
   box-shadow: 0px 4px 75px 0px rgba(0, 0, 0, 0.2509803922);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 .provider-cta .right {
   position: relative;
-  top: -20px;
   height: 450px;
+  top: -20px;
 }
 @media (max-width: 767px) {
   .provider-cta .right {
@@ -1014,9 +1019,6 @@ footer .copyrights a:hover {
 .provider-cta .right .holder {
   position: absolute;
   background-image: url(../assets/img/provider-cta-yellow-bg.png);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: center center;
   width: 100%;
   height: 90%;
   bottom: 0;
@@ -1035,9 +1037,6 @@ footer .copyrights a:hover {
 }
 .provider-cta .left .holder {
   background-image: url(../assets/img/provider-cta-black-bg.png);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: center center;
   padding-top: 50px;
   padding-right: 156px;
   margin-right: -220px;
