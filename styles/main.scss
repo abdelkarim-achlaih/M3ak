@@ -70,6 +70,22 @@ ul {
   justify-content: center;
 }
 
+.center-md {
+  @include breakpoints('md') {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+h1,
+h2,
+p,
+a {
+  @include breakpoints('md') {
+    text-align: center;
+  }
+}
+
 .section-question {
   padding: 12px 31px;
   @include font-size(24px);
@@ -187,6 +203,11 @@ header {
 .hero {
   height: calc(100vh - 110px);
 
+  @include breakpoints("md") {
+    height: auto;
+
+  }
+
   .container-xxl {
     position: relative;
 
@@ -212,10 +233,12 @@ header {
         padding: 45px
       }
 
+      @include breakpoints("md") {
+        padding: 15px;
+        padding-top: 45px;
+      }
+
       .text-copy {
-        @include breakpoints("md") {
-          text-align: center
-        }
 
         h1 {
           @include font-size(40px);
@@ -427,6 +450,13 @@ header {
         border-radius: 8px;
         color: white;
 
+        @include breakpoints("md") {
+          bottom: 0;
+          right: 50%;
+          transform: translate(50%, 50%);
+
+        }
+
         p:first-child {
           font-weight: 600;
           @include font-size(36px)
@@ -453,3 +483,69 @@ header {
 }
 
 /* End About */
+/* Start How */
+.how {
+  margin-top: 100px;
+
+  .section-title {
+    h2 {
+      @include font-size(32px);
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -16px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 6px;
+        background-image: $mainGradientYellow;
+        width: 68px;
+        border-radius: 56px;
+        transition: $transitionDuration;
+      }
+    }
+  }
+
+  .steps {
+    .step {
+      max-width: 300px;
+
+      .number {
+        @include font-size(48px);
+        color: white;
+        width: 127px;
+        height: 127px;
+        background-color: #FC9918;
+        border-radius: 16px;
+      }
+
+      p {
+        padding-right: 8px;
+      }
+
+      p:first-child {
+        @include font-size(24px);
+
+      }
+
+      p:last-child {
+        @include font-size(20px);
+        line-height: 30px;
+        color: #787878;
+      }
+
+      @include breakpoints('md') {
+        max-width: unset;
+
+        p {
+          padding-right: unset;
+        }
+
+      }
+    }
+
+  }
+}
+
+/* End How */

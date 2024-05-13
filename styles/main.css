@@ -48,6 +48,22 @@ ul {
   justify-content: center;
 }
 
+@media (max-width: 991px) {
+  .center-md {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 991px) {
+  h1,
+  h2,
+  p,
+  a {
+    text-align: center;
+  }
+}
+
 .section-question {
   padding: 12px 31px;
   color: #212936;
@@ -183,6 +199,11 @@ header .container-xxl .socials .nav-link svg {
 .hero {
   height: calc(100vh - 110px);
 }
+@media (max-width: 991px) {
+  .hero {
+    height: auto;
+  }
+}
 .hero .container-xxl {
   position: relative;
 }
@@ -209,8 +230,9 @@ header .container-xxl .socials .nav-link svg {
   }
 }
 @media (max-width: 991px) {
-  .hero .container-xxl .section-container .text-copy {
-    text-align: center;
+  .hero .container-xxl .section-container {
+    padding: 15px;
+    padding-top: 45px;
   }
 }
 @media (min-width: 1400px) {
@@ -414,6 +436,13 @@ header .container-xxl .socials .nav-link svg {
   border-radius: 8px;
   color: white;
 }
+@media (max-width: 991px) {
+  .about .left .col-holder .stats {
+    bottom: 0;
+    right: 50%;
+    transform: translate(50%, 50%);
+  }
+}
 .about .left .col-holder .stats p:first-child {
   font-weight: 600;
 }
@@ -448,4 +477,90 @@ header .container-xxl .socials .nav-link svg {
   z-index: -1;
 }
 
-/* End About *//*# sourceMappingURL=main.css.map */
+/* End About */
+/* Start How */
+.how {
+  margin-top: 100px;
+}
+.how .section-title h2 {
+  position: relative;
+}
+@media (min-width: 1400px) {
+  .how .section-title h2 {
+    font-size: 32px;
+  }
+}
+@media (max-width: 1399px) {
+  .how .section-title h2 {
+    font-size: calc(32px - 0.45vw);
+  }
+}
+.how .section-title h2::after {
+  content: "";
+  position: absolute;
+  bottom: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 6px;
+  background-image: linear-gradient(90deg, #FFAF04 -0.01%, #F98429 52%);
+  width: 68px;
+  border-radius: 56px;
+  transition: 0.3s;
+}
+.how .steps .step {
+  max-width: 300px;
+}
+.how .steps .step .number {
+  color: white;
+  width: 127px;
+  height: 127px;
+  background-color: #FC9918;
+  border-radius: 16px;
+}
+@media (min-width: 1400px) {
+  .how .steps .step .number {
+    font-size: 48px;
+  }
+}
+@media (max-width: 1399px) {
+  .how .steps .step .number {
+    font-size: calc(48px - 0.45vw);
+  }
+}
+.how .steps .step p {
+  padding-right: 8px;
+}
+@media (min-width: 1400px) {
+  .how .steps .step p:first-child {
+    font-size: 24px;
+  }
+}
+@media (max-width: 1399px) {
+  .how .steps .step p:first-child {
+    font-size: calc(24px - 0.45vw);
+  }
+}
+.how .steps .step p:last-child {
+  line-height: 30px;
+  color: #787878;
+}
+@media (min-width: 1400px) {
+  .how .steps .step p:last-child {
+    font-size: 20px;
+  }
+}
+@media (max-width: 1399px) {
+  .how .steps .step p:last-child {
+    font-size: calc(20px - 0.45vw);
+  }
+}
+@media (max-width: 991px) {
+  .how .steps .step {
+    max-width: unset;
+  }
+  .how .steps .step p {
+    padding-right: unset;
+  }
+}
+
+/* End How *//*# sourceMappingURL=main.css.map */
