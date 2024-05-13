@@ -772,9 +772,8 @@ header .container-xxl .socials .nav-link svg {
 }
 .plans .switcher .toog:hover {
   font-weight: 600;
-  background-color: rgba(253, 236, 226, 0.55);
 }
-.plans .switcher .toog:active {
+.plans .switcher .toog.active {
   font-weight: 600;
 }
 .plans .switcher .switcher-bg {
@@ -788,12 +787,10 @@ header .container-xxl .socials .nav-link svg {
   transition: 0.3s;
 }
 .plans .switcher .switcher-bg.left {
-  right: unset;
   left: 10px;
 }
 .plans .switcher .switcher-bg.right {
-  left: unset;
-  right: 10px;
+  left: calc(100% - 172px);
 }
 .plans .plans-holder .plan {
   background-color: #FAFAFA;

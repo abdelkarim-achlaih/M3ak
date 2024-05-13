@@ -756,10 +756,9 @@ $classes: one, two, three, four, five, six, seven;
 
       &:hover {
         font-weight: 600;
-        background-color: rgba(#FDECE2, 0.55)
       }
 
-      &:active {
+      &.active {
         font-weight: 600;
       }
     }
@@ -775,13 +774,11 @@ $classes: one, two, three, four, five, six, seven;
       transition: $transitionDuration;
 
       &.left {
-        right: unset;
         left: 10px;
       }
 
       &.right {
-        left: unset;
-        right: 10px;
+        left: calc(100% - 172px);
       }
     }
   }
