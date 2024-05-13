@@ -871,3 +871,114 @@ $classes: one, two, three, four, five, six, seven;
 }
 
 /* End Plans */
+/* Start Footer */
+footer {
+  margin-top: 100px;
+  background-color: #202020;
+
+  .links {
+    li {
+
+      a {
+        text-decoration: none;
+        font-size: 20px;
+        color: white;
+        display: block;
+        position: relative;
+        width: fit-content;
+
+        @include breakpoints('md') {
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: -7px;
+          right: 0;
+          height: 6px;
+          background-image: $mainGradientYellow;
+          width: 0;
+          border-radius: 56px;
+          transition: $transitionDuration;
+        }
+
+        &:hover::after {
+          width: 50px;
+
+        }
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .main-footer {
+    padding-top: 43px;
+    border-bottom: 1px solid #FFFFFF;
+
+    h3 {
+      font-size: 20px;
+      background: $mainGradientYellow;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .socials {
+
+      .nav-link {
+        width: 48px;
+        height: 48px;
+        background-color: #FFFFFF0D;
+        background-image: none;
+        border-radius: 50%;
+        transition: $transitionDuration;
+
+        &:hover {
+          background-color: transparent;
+          background-image: $mainGradientYellow;
+        }
+
+        svg {
+          font-size: 22px;
+          @include font-size(22px);
+          color: white;
+        }
+      }
+    }
+
+    .download {
+      img {
+        width: 160px;
+        max-width: 100%;
+        transition: $transitionDuration;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+
+  .copyrights {
+    padding-top: 35px;
+    padding-bottom: 35px;
+
+    a {
+      text-decoration: none;
+      color: white;
+      font-size: 16px;
+
+      &:hover {
+        color: white;
+      }
+    }
+  }
+}
+
+/* End Footer */

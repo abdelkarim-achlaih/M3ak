@@ -850,4 +850,101 @@ header .container-xxl .socials .nav-link svg {
   background-image: url("../assets/img/plans_popular_check.png");
 }
 
-/* End Plans *//*# sourceMappingURL=main.css.map */
+/* End Plans */
+/* Start Footer */
+footer {
+  margin-top: 100px;
+  background-color: #202020;
+}
+footer .links li a {
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  display: block;
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+@media (max-width: 991px) {
+  footer .links li a {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+footer .links li a::after {
+  content: "";
+  position: absolute;
+  bottom: -7px;
+  right: 0;
+  height: 6px;
+  background-image: linear-gradient(90deg, #FFAF04 -0.01%, #F98429 52%);
+  width: 0;
+  border-radius: 56px;
+  transition: 0.3s;
+}
+footer .links li a:hover::after {
+  width: 50px;
+}
+footer .links li:not(:last-child) {
+  margin-bottom: 20px;
+}
+footer .main-footer {
+  padding-top: 43px;
+  border-bottom: 1px solid #FFFFFF;
+}
+footer .main-footer h3 {
+  font-size: 20px;
+  background: linear-gradient(90deg, #FFAF04 -0.01%, #F98429 52%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+footer .main-footer .socials .nav-link {
+  width: 48px;
+  height: 48px;
+  background-color: rgba(255, 255, 255, 0.0509803922);
+  background-image: none;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+footer .main-footer .socials .nav-link:hover {
+  background-color: transparent;
+  background-image: linear-gradient(90deg, #FFAF04 -0.01%, #F98429 52%);
+}
+footer .main-footer .socials .nav-link svg {
+  font-size: 22px;
+  color: white;
+}
+@media (min-width: 1400px) {
+  footer .main-footer .socials .nav-link svg {
+    font-size: 22px;
+  }
+}
+@media (max-width: 1399px) {
+  footer .main-footer .socials .nav-link svg {
+    font-size: calc(22px - 0.45vw);
+  }
+}
+footer .main-footer .download img {
+  width: 160px;
+  max-width: 100%;
+  transition: 0.3s;
+}
+footer .main-footer .download img:hover {
+  transform: scale(1.05);
+}
+footer .copyrights {
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+footer .copyrights a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+footer .copyrights a:hover {
+  color: white;
+}
+
+/* End Footer *//*# sourceMappingURL=main.css.map */
