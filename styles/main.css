@@ -74,6 +74,17 @@ a.btn:hover,
   background-color: none;
 }
 
+button.btn.yellow {
+  background-image: linear-gradient(90deg, #FFAF04 -0.01%, #F98429 52%);
+  background-color: none;
+  color: white;
+}
+button.btn.yellow:hover {
+  color: white;
+  background-image: none;
+  background-color: rgb(22, 24, 27);
+}
+
 .btn-white {
   background-color: white;
   color: black;
@@ -86,6 +97,22 @@ a.btn:hover,
 }
 .btn-white:hover svg {
   color: white;
+}
+
+h2.after {
+  position: relative;
+}
+h2.after::after {
+  content: "";
+  position: absolute;
+  bottom: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 6px;
+  background-image: linear-gradient(90deg, #FFAF04 -0.01%, #F98429 52%);
+  width: 68px;
+  border-radius: 56px;
+  transition: 0.3s;
 }
 
 .center-xy {
@@ -504,9 +531,6 @@ header .container-xxl .socials .nav-link svg {
 .how {
   margin-top: 100px;
 }
-.how .section-title h2 {
-  position: relative;
-}
 @media (min-width: 1400px) {
   .how .section-title h2 {
     font-size: 32px;
@@ -516,18 +540,6 @@ header .container-xxl .socials .nav-link svg {
   .how .section-title h2 {
     font-size: calc(32px - 0.45vw);
   }
-}
-.how .section-title h2::after {
-  content: "";
-  position: absolute;
-  bottom: -16px;
-  left: 50%;
-  transform: translateX(-50%);
-  height: 6px;
-  background-image: linear-gradient(90deg, #FFAF04 -0.01%, #F98429 52%);
-  width: 68px;
-  border-radius: 56px;
-  transition: 0.3s;
 }
 .how .steps .step {
   max-width: 300px;
@@ -721,4 +733,124 @@ header .container-xxl .socials .nav-link svg {
   line-height: 150%;
 }
 
-/* End Provider *//*# sourceMappingURL=main.css.map */
+/* End Provider */
+/* Start Plans */
+.plans {
+  margin-top: 100px;
+}
+@media (min-width: 1400px) {
+  .plans .section-title h2 {
+    font-size: 32px;
+  }
+}
+@media (max-width: 1399px) {
+  .plans .section-title h2 {
+    font-size: calc(32px - 0.45vw);
+  }
+}
+.plans .switcher {
+  border-radius: 1000px;
+  padding: 10px;
+  position: relative;
+  background-color: white;
+  box-shadow: 0 4px 75px 0 rgba(0, 0, 0, 0.1);
+}
+.plans .switcher .toog {
+  width: 162px;
+  font-size: 24px;
+  text-align: center;
+  padding-top: 19px;
+  padding-bottom: 19px;
+  border-radius: 1000px;
+  transition: 0.3s;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  position: relative;
+  z-index: 2;
+}
+.plans .switcher .toog:hover {
+  font-weight: 600;
+  background-color: rgba(253, 236, 226, 0.55);
+}
+.plans .switcher .toog:active {
+  font-weight: 600;
+}
+.plans .switcher .switcher-bg {
+  position: absolute;
+  background-color: #FDECE2;
+  border-radius: 1000px;
+  width: 162px;
+  height: 74px;
+  top: 10px;
+  z-index: 0;
+  transition: 0.3s;
+}
+.plans .switcher .switcher-bg.left {
+  right: unset;
+  left: 10px;
+}
+.plans .switcher .switcher-bg.right {
+  left: unset;
+  right: 10px;
+}
+.plans .plans-holder .plan {
+  background-color: #FAFAFA;
+  border: 1px solid #F0F0F0;
+  border-radius: 50px;
+  padding: 50px 16px 33px;
+}
+.plans .plans-holder .plan .name {
+  font-size: 24px;
+  color: #747474;
+}
+.plans .plans-holder .plan .price .num {
+  font-size: 48px;
+  margin-left: 10px;
+}
+.plans .plans-holder .plan .price .cur {
+  font-size: 20px;
+}
+.plans .plans-holder .plan button {
+  width: 100%;
+}
+.plans .plans-holder .plan ul li {
+  padding-right: 36px;
+  font-size: 14px;
+  line-height: 21px;
+  position: relative;
+}
+.plans .plans-holder .plan ul li:not(:last-child) {
+  margin-bottom: 18px;
+}
+.plans .plans-holder .plan ul li::before {
+  content: "";
+  background-image: url("../assets/img/plans_check.png");
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  transform: translate(50%, -50%);
+}
+.plans .plans-holder .plan.popular {
+  padding: 100px 16px;
+  color: white;
+  background-image: url(../assets/img/popular_plan_bg.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.plans .plans-holder .plan.popular .name {
+  color: white;
+}
+.plans .plans-holder .plan.popular button:hover {
+  background-color: white;
+  color: black;
+}
+.plans .plans-holder .plan.popular ul li::before {
+  background-image: url("../assets/img/plans_popular_check.png");
+}
+
+/* End Plans *//*# sourceMappingURL=main.css.map */
