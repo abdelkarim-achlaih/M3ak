@@ -115,6 +115,11 @@ button.btn.yellow {
   }
 }
 
+button.btn-gray {
+  background-color: #FFFFFF3B;
+
+}
+
 h2.after {
   position: relative;
 
@@ -315,32 +320,6 @@ header {
           }
         }
 
-        .features {
-          margin-bottom: 50px;
-
-          .feature {
-            text-align: center;
-
-            .feature-icon {
-              background-image: $secondGradientYellow;
-              width: 113px;
-              height: 113px;
-              border-radius: 50%;
-              margin-bottom: 30px;
-              margin-right: auto;
-              margin-left: auto;
-
-              svg {
-                font-size: 33px;
-              }
-            }
-
-            p {
-              font-weight: 600;
-              @include font-size(24px)
-            }
-          }
-        }
       }
 
       .left {
@@ -436,6 +415,55 @@ header {
     }
   }
 
+}
+
+.features {
+  margin-bottom: 50px;
+
+  .feature {
+    text-align: center;
+
+    .feature-icon {
+      background-image: $secondGradientYellow;
+      width: 113px;
+      height: 113px;
+      border-radius: 50%;
+      margin-bottom: 30px;
+      margin-right: auto;
+      margin-left: auto;
+
+      svg {
+        font-size: 33px;
+      }
+    }
+
+    p {
+      font-weight: 600;
+      @include font-size(24px)
+    }
+  }
+
+  &.aboutus {
+
+    .feature-icon {
+      background-image: none;
+      background-color: #FDE7D0;
+      width: 207px;
+      height: 207px;
+
+      img {
+        width: 50px;
+      }
+    }
+  }
+}
+
+.props {
+  background-image: url(../assets/img/map_bg.png);
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  min-height: 590px;
 }
 
 @keyframes bounce {
@@ -720,6 +748,34 @@ $classes: one, two, three, four, five, six, seven;
     font-size: 48px;
     line-height: 150%;
   }
+
+  &.aboutus {
+    margin-top: unset;
+
+    .section-container {
+      border-radius: 30px;
+      background-image: linear-gradient(177.39deg, #FEF4EC 1.94%, rgba(254, 244, 236, 0) 97.6%);
+      ;
+    }
+
+    h2 {
+      font-size: 40px;
+
+      span {
+        color: #FFAF04;
+      }
+    }
+
+    .badges {
+      a img {
+        transition: $transitionDuration;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
 }
 
 /* End Provider */
@@ -982,3 +1038,79 @@ footer {
 }
 
 /* End Footer */
+/* Start provider-cta */
+.provider-cta {
+  overflow: hidden;
+  padding-top: 60px;
+
+  .container-fluid {
+    padding: 0;
+  }
+
+  .right {
+    position: relative;
+    top: -20px;
+
+    .holder {
+      position: absolute;
+      background-image: url(../assets/img/provider-cta-yellow-bg.png);
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      background-position: center center;
+      width: 100%;
+      height: 90%;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    height: 450px;
+
+    img {
+      position: relative;
+      z-index: 60;
+      height: 450px;
+    }
+  }
+
+  .left {
+    background-image: url(../assets/img/provider-cta-black-bg.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding-top: 50px;
+    padding-right: 156px;
+    margin-right: -220px;
+    width: calc(100% + 220px);
+
+    @include breakpoints('md') {
+      padding-right: 60px;
+      margin-right: -100px;
+      width: calc(100% + 100px);
+      padding: 20px;
+    }
+
+    @include breakpoints('sm') {
+      padding-right: unset;
+      margin-right: unset;
+      width: 100%;
+    }
+
+    h2 {
+      max-width: 740px;
+
+      @include breakpoints('md') {
+        // text-align: start;
+        font-size: 28px;
+
+      }
+
+      @include breakpoints('sm') {
+        // text-align: start;
+
+      }
+    }
+  }
+}
+
+/* End provider-cta */
