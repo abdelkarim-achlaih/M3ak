@@ -646,6 +646,10 @@ header {
       $color: #FDF3EB;
     }
 
+    @else if $class =="eight" {
+      $color: #FFE8E8;
+    }
+
     .service.#{$class} {
       background-color: rgba($color, 0.3);
 
@@ -660,7 +664,8 @@ header {
   }
 }
 
-.services {
+.services,
+.services-services {
   margin-top: 100px;
 
   h2 {
@@ -668,18 +673,10 @@ header {
   }
 
   .services-holder {
-    margin-right: -175px;
-
-    @include breakpoints('md') {
-      margin-right: unset;
-
-    }
-
     .service {
       width: 262px;
-      height: 231px;
+      height: 426px;
       padding: 25px 19px;
-      border-radius: 32px;
       transition-duration: $transitionDuration;
 
       .service-icon {
@@ -710,15 +707,43 @@ header {
         font-size: 24px;
       }
 
+      p {
+        margin-top: 24px;
+        font-size: 20px;
+        line-height: 30px;
+      }
     }
 
     a {
       width: 262px;
     }
+
+    &.marg {
+      margin-right: -175px;
+
+      @include breakpoints('md') {
+        margin-right: unset;
+
+      }
+
+      .service {
+        height: 231px;
+        border-radius: 32px;
+      }
+    }
+
+    &.serv {
+      .service {
+        border-top-left-radius: 241px 76px;
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 241px 76px;
+        border-bottom-left-radius: 50px;
+      }
+    }
   }
 }
 
-$classes: one, two, three, four, five, six, seven;
+$classes: one, two, three, four, five, six, seven, eight;
 
 @include set-colors($classes);
 
@@ -1132,3 +1157,20 @@ footer {
 }
 
 /* End provider-cta */
+/* Start Services-services */
+.services-services {
+  .after {
+    &::after {
+      left: unset;
+      right: -30px;
+
+      @include breakpoints('md') {
+        left: 50%;
+        right: unset;
+
+      }
+    }
+  }
+}
+
+/* end Services-services */
