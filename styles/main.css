@@ -1262,4 +1262,17 @@ footer .copyrights a:hover {
   }
 }
 
-/* End Contact *//*# sourceMappingURL=main.css.map */
+/* End Contact */
+/* Start Terms */
+.terms h3 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 28.8px;
+}
+.terms p {
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 48px;
+}
+
+/* End Terms *//*# sourceMappingURL=main.css.map */
