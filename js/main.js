@@ -67,25 +67,34 @@ const appearStagger = {
 	duration: 0.65,
 	stagger: 0.3,
 };
+const delay = "<";
 function animateHeader() {
 	const allowedWidth = 992;
 	let load = gsap.timeline({
 		defaults: {
-			duration: 1.5,
+			duration: 1,
 			ease: "power4.inOut",
 		},
 	});
 	load.from("header .navbar-brand", slideLeft);
 	if (window.innerWidth > allowedWidth) {
 		load
-			.from("header .navigation li", {
-				y: -200,
-				stagger: 0.15,
-			})
-			.from("header .socials li", {
-				y: -200,
-				stagger: 0.15,
-			});
+			.from(
+				"header .navigation li",
+				{
+					y: -200,
+					stagger: 0.15,
+				},
+				delay
+			)
+			.from(
+				"header .socials li",
+				{
+					y: -200,
+					stagger: 0.15,
+				},
+				delay
+			);
 	}
 }
 function animateHero() {
@@ -98,23 +107,31 @@ function animateHero() {
 		});
 		load
 			.from(".hero .text-copy > h1, .hero .text-copy > p", slideDownStager)
-			.from(".hero .text-copy .badges a", {
-				...slideLeft,
-				stagger: 0.3,
-			})
+			.from(
+				".hero .text-copy .badges a",
+				{
+					...slideLeft,
+					stagger: 0.15,
+				},
+				delay
+			)
 			.from(
 				".hero .column-two, .hero .column-one",
 				{
 					...slideRight,
-					stagger: 0.3,
+					stagger: 0.15,
 				},
-				"<"
+				delay
 			)
-			.from(".hero .text-copy .features .feature", slideDownStager)
-			.from(".hero .scroll-button", {
-				opacity: 0,
-				y: 150,
-			});
+			.from(".hero .text-copy .features .feature", slideDownStager, 0)
+			.from(
+				".hero .scroll-button",
+				{
+					opacity: 0,
+					y: 150,
+				},
+				delay
+			);
 	}
 }
 function animateAbout(section) {
@@ -123,10 +140,14 @@ function animateAbout(section) {
 			.from(`${section} .section-question`, {
 				x: 1500,
 			})
-			.from(`${section} h2`, {
-				opacity: 0,
-				y: -50,
-			})
+			.from(
+				`${section} h2`,
+				{
+					opacity: 0,
+					y: -50,
+				},
+				delay
+			)
 			.from(
 				`${section} img`,
 				{
@@ -134,20 +155,24 @@ function animateAbout(section) {
 					x: -1500,
 					stagger: 0.3,
 				},
-				"<"
+				delay
 			)
-			.from(`${section} ul li`, {
-				opacity: 0,
-				y: -50,
-				stagger: 0.3,
-			})
+			.from(
+				`${section} ul li`,
+				{
+					opacity: 0,
+					y: -50,
+					stagger: 0.3,
+				},
+				delay
+			)
 			.from(
 				`${section} .stats, section.about .decoration`,
 				{
 					opacity: 0,
 					x: -1500,
 				},
-				"<"
+				delay
 			);
 	}
 }
@@ -167,55 +192,68 @@ function createTimeline(section) {
 function animateHow(section) {
 	if (document.querySelector(section)) {
 		createTimeline(section)
-			.from(`${section} .section-question`, slideDown)
-			.from(`${section} h2`, slideDown)
-			.from(`${section} img`, appear)
-			.from(`${section} .step`, slideDownStager);
+			.from(`${section} .section-question`, slideDown, delay)
+			.from(`${section} h2`, slideDown, delay)
+			.from(`${section} img`, appear, delay)
+			.from(`${section} .step`, slideDownStager, delay);
 	}
 }
 function animateServices(section) {
 	if (document.querySelector(section)) {
 		createTimeline(section)
-			.from(`${section} .section-question`, slideLeft)
-			.from(`${section} h2`, slideLeft)
-			.to(`${section} .service`, {
-				scale: 1,
-				stagger: 0.15,
-			})
-			.to(`${section} .btn`, {
-				x: 0,
-			});
+			.from(`${section} .section-question`, slideLeft, delay)
+			.from(`${section} h2`, slideLeft, delay)
+			.to(
+				`${section} .service`,
+				{
+					scale: 1,
+					stagger: 0.01,
+				},
+				delay
+			)
+			.to(
+				`${section} .btn`,
+				{
+					x: 0,
+				},
+				delay
+			);
 	}
 }
 function animateProvider(section) {
 	if (document.querySelector(section)) {
 		createTimeline(section)
 			.from(`${section} h2`, slideLeft)
-			.to(`${section} .btn`, {
-				x: 0,
-			})
-			.from(`${section} img`, appear, "<");
+			.to(
+				`${section} .btn`,
+				{
+					x: 0,
+				},
+				delay
+			)
+			.from(`${section} img`, appear, delay);
 	}
 }
 function animatePlans(section) {
 	if (document.querySelector(section)) {
 		createTimeline(section)
-			.from(`${section} .section-question`, slideDown)
-			.from(`${section} h2`, slideDown)
-			.from(`${section} .plan`, slideDownStager)
-			.from(`${section} .switcher`, appear);
+			.from(`${section} .section-question`, slideDown, delay)
+			.from(`${section} h2`, slideDown, delay)
+			.from(`${section} .plan`, slideDownStager, delay)
+			.from(`${section} .switcher`, appear, delay);
 	}
 }
 function animateFooter(section) {
 	if (document.querySelector(section)) {
 		createTimeline(section)
 			.from(`${section} .brand`, slideDown)
-			.from(`${section} .links-one li`, slideDownStager, "<")
-			.from(`${section} .socials li`, slideDownStager, "<")
-			.from(`${section} .download a`, slideDownStager, "<")
+			.from(`${section} .links-one li`, slideDownStager, delay)
+			.from(`${section} .socials li`, slideDownStager, delay)
+			.from(`${section} .download a`, slideDownStager, delay)
 			.from(
 				`${section} .copyrights p, ${section} .links-two li`,
-				slideDownStager
+				slideDownStager,
+				delay
 			);
 	}
 }
