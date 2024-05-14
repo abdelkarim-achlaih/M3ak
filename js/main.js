@@ -37,6 +37,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 	animateAbout(".home .about");
 	animateHow(".how");
 	animateServices(".services");
+	animateServices(".services-services");
 	animateProvider(".provider");
 	animatePlans(".plans");
 	animateFooter("footer");
@@ -201,7 +202,8 @@ function animateHow(section) {
 }
 function animateServices(section) {
 	if (document.querySelector(section)) {
-		createTimeline(section)
+		const time = createTimeline(section);
+		time
 			.from(`${section} .section-question`, slideLeft, delay)
 			.from(`${section} h2`, slideLeft, delay)
 			.to(
@@ -211,14 +213,16 @@ function animateServices(section) {
 					stagger: 0.01,
 				},
 				delay
-			)
-			.to(
+			);
+		if (document.querySelector(`${section} .btn`)) {
+			time.to(
 				`${section} .btn`,
 				{
 					x: 0,
 				},
 				delay
 			);
+		}
 	}
 }
 function animateProvider(section) {

@@ -828,23 +828,23 @@ header .container-xxl .socials .nav-link svg {
   font-size: 48px;
   line-height: 150%;
 }
-.provider.about, .provider.services {
+.provider.about, .provider.services-page {
   margin-top: unset;
 }
-.provider.about .section-container, .provider.services .section-container {
+.provider.about .section-container, .provider.services-page .section-container {
   border-radius: 30px;
   background-image: linear-gradient(177.39deg, #FEF4EC 1.94%, rgba(254, 244, 236, 0) 97.6%);
 }
-.provider.about h2, .provider.services h2 {
+.provider.about h2, .provider.services-page h2 {
   font-size: 40px;
 }
-.provider.about h2 span, .provider.services h2 span {
+.provider.about h2 span, .provider.services-page h2 span {
   color: #FFAF04;
 }
-.provider.about .badges a img, .provider.services .badges a img {
+.provider.about .badges a img, .provider.services-page .badges a img {
   transition: 0.3s;
 }
-.provider.about .badges a img:hover, .provider.services .badges a img:hover {
+.provider.about .badges a img:hover, .provider.services-page .badges a img:hover {
   transform: scale(1.05);
 }
 
