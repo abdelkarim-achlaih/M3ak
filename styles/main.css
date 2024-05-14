@@ -1181,4 +1181,85 @@ footer .copyrights a:hover {
   transform: translate(50%, -50%);
 }
 
-/* End Page Title *//*# sourceMappingURL=main.css.map */
+/* End Page Title */
+/* Start Contact */
+.contact {
+  position: relative;
+  overflow: hidden;
+}
+.contact .contact-bg {
+  max-width: 768px;
+  width: 33%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+.contact h2 {
+  font-size: 40px;
+}
+.contact h2 span {
+  color: #FFAF04;
+}
+.contact .info {
+  background-color: white;
+  border-radius: 20px;
+}
+.contact .info .info-rows .icon {
+  width: 56px;
+  height: 56px;
+  background-color: #F4F8FC;
+  border-radius: 50%;
+}
+.contact .info .info-rows .icon svg {
+  color: #FFAF04;
+  font-size: 20px;
+}
+.contact .info .info-rows p {
+  margin-bottom: 7px;
+}
+.contact .info .socials {
+  margin-bottom: 60px;
+}
+.contact .info .socials svg {
+  font-size: 25px;
+  transition: 0.3s;
+}
+.contact .info .socials svg:hover {
+  color: #FFAF04;
+}
+.contact .form p {
+  color: #787878;
+  letter-spacing: 0.02em;
+  line-height: 27.79px;
+  font-size: 24px;
+}
+.contact .form form input,
+.contact .form form textarea {
+  max-width: 788px;
+  background-color: #FBFBFB;
+  border-color: #E0E0E0;
+}
+@media (max-width: 991px) {
+  .contact .form form input,
+  .contact .form form textarea {
+    max-width: unset;
+  }
+}
+.contact .form form input:focus,
+.contact .form form textarea:focus {
+  border-color: #FFAF04;
+  outline: none;
+  box-shadow: none;
+}
+.contact .form form button {
+  max-width: 788px;
+  font-size: 20px;
+}
+@media (max-width: 991px) {
+  .contact .form form button {
+    max-width: unset;
+  }
+}
+
+/* End Contact *//*# sourceMappingURL=main.css.map */

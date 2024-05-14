@@ -42,6 +42,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 	animatePlans(".plans");
 	animateFooter("footer");
 	animateProps("section.props");
+	animateContact(".contact");
 });
 const slideDown = {
 	opacity: 0,
@@ -274,6 +275,11 @@ function animateProps(section) {
 		createTimeline(section)
 			.from(`${section} h2`, slideDown)
 			.from(`${section} .feature`, slideDownStager, delay);
+	}
+}
+function animateContact(section) {
+	if (document.querySelector(section)) {
+		createTimeline(section).from(`${section} .colmun`, slideDownStager);
 	}
 }
 // End Animations

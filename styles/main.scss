@@ -24,8 +24,7 @@
 $transitionDuration: .3s;
 $mainGradientYellow: linear-gradient(90deg, #FFAF04 -0.01%, #F98429 52%);
 $secondGradientYellow: linear-gradient(90deg, rgba(255, 175, 4, 0.7) -0.01%, rgba(249, 132, 41, 0.7) 52%);
-;
-
+$mainYellow: #FFAF04;
 /* End Variables */
 
 /* Start Global Rules */
@@ -821,7 +820,7 @@ $classes: one, two, three, four, five, six, seven, eight;
       font-size: 40px;
 
       span {
-        color: #FFAF04;
+        color: $mainYellow;
       }
     }
 
@@ -1228,3 +1227,103 @@ footer {
 }
 
 /* End Page Title */
+/* Start Contact */
+.contact {
+  position: relative;
+  overflow: hidden;
+
+  .contact-bg {
+    max-width: 768px;
+    width: 33%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+  }
+
+  h2 {
+    font-size: 40px;
+
+    span {
+      color: $mainYellow;
+    }
+  }
+
+  .info {
+    background-color: white;
+    border-radius: 20px;
+
+
+    .info-rows {
+      .icon {
+        width: 56px;
+        height: 56px;
+        background-color: #F4F8FC;
+        border-radius: 50%;
+
+        svg {
+          color: $mainYellow;
+          font-size: 20px;
+        }
+      }
+
+      p {
+        margin-bottom: 7px;
+      }
+    }
+
+    .socials {
+      margin-bottom: 60px;
+
+      svg {
+        font-size: 25px;
+        transition: $transitionDuration;
+
+        &:hover {
+          color: $mainYellow;
+        }
+      }
+    }
+  }
+
+  .form {
+    p {
+      color: #787878;
+      letter-spacing: 0.02em;
+      line-height: 27.79px;
+      font-size: 24px;
+    }
+
+    form {
+
+      input,
+      textarea {
+        max-width: 788px;
+
+        @include breakpoints('md') {
+          max-width: unset;
+        }
+
+        background-color: #FBFBFB;
+        border-color: #E0E0E0;
+
+        &:focus {
+          border-color: $mainYellow;
+          outline: none;
+          box-shadow: none;
+        }
+      }
+
+      button {
+        max-width: 788px;
+        font-size: 20px;
+
+        @include breakpoints('md') {
+          max-width: unset;
+        }
+      }
+    }
+  }
+}
+
+/* End Contact */
