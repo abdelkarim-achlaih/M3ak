@@ -120,7 +120,7 @@ button.btn-gray {
 
 }
 
-h2.after {
+.after {
   position: relative;
 
   &::after {
@@ -259,6 +259,7 @@ header {
 /* Start Hero */
 .hero {
   height: calc(100vh - 110px);
+  overflow: hidden;
 
   @include breakpoints("md") {
     height: auto;
@@ -340,6 +341,7 @@ header {
 
         .floating-box-holder {
           position: relative;
+          z-index: 300;
 
           .floating-box {
             width: 40vh;
@@ -360,8 +362,12 @@ header {
           }
         }
 
-        .mobile-holder img {
-          height: 75vh;
+        .mobile-holder {
+          z-index: 299;
+
+          img {
+            height: 75vh;
+          }
         }
       }
     }
@@ -375,6 +381,11 @@ header {
       padding: 10px;
       background-color: transparent;
       z-index: 100;
+
+      @include breakpoints("md") {
+        bottom: 100px;
+
+      }
 
       // border-width: 2px;
       // border-image: $mainGradientYellow 1;
@@ -1173,4 +1184,26 @@ footer {
   }
 }
 
-/* end Services-services */
+/* End Services-services */
+/* Start Page Title */
+.page-title {
+  height: 300px;
+  background-image: url(../assets/img/section-title-bg.svg);
+  background-size: cover;
+
+  h1 {
+    padding-right: 40px;
+    font-size: 40px;
+
+    &::after {
+      height: 43px;
+      width: 5px;
+      left: unset;
+      right: 20px;
+      transform: translate(50%, -50%);
+
+    }
+  }
+}
+
+/* End Page Title */
