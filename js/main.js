@@ -39,6 +39,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 	animateServices(".services");
 	animateProvider(".provider");
 	animatePlans(".plans");
+	animateFooter("footer");
 });
 const slideDown = {
 	opacity: 0,
@@ -67,22 +68,25 @@ const appearStagger = {
 	stagger: 0.3,
 };
 function animateHeader() {
+	const allowedWidth = 992;
 	let load = gsap.timeline({
 		defaults: {
 			duration: 1.5,
 			ease: "power4.inOut",
 		},
 	});
-	load
-		.from("header .navbar-brand", slideLeft)
-		.from("header .navigation li", {
-			y: -200,
-			stagger: 0.15,
-		})
-		.from("header .socials li", {
-			y: -200,
-			stagger: 0.15,
-		});
+	load.from("header .navbar-brand", slideLeft);
+	if (window.innerWidth > allowedWidth) {
+		load
+			.from("header .navigation li", {
+				y: -200,
+				stagger: 0.15,
+			})
+			.from("header .socials li", {
+				y: -200,
+				stagger: 0.15,
+			});
+	}
 }
 function animateHero() {
 	let load = gsap.timeline({
@@ -187,5 +191,16 @@ function animatePlans(section) {
 		.from(`${section} h2`, slideDown)
 		.from(`${section} .plan`, slideDownStager)
 		.from(`${section} .switcher`, appear);
+}
+function animateFooter(section) {
+	createTimeline(section)
+		.from(`${section} .brand`, slideDown)
+		.from(`${section} .links-one li`, slideDownStager, "<")
+		.from(`${section} .socials li`, slideDownStager, "<")
+		.from(`${section} .download a`, slideDownStager, "<")
+		.from(
+			`${section} .copyrights p, ${section} .links-two li`,
+			slideDownStager
+		);
 }
 // End Animations
