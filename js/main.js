@@ -37,9 +37,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
 	animateAbout(".home .about");
 	animateHow(".how");
 	animateServices(".services");
-	animateProvider(".home .provider");
-	animatePlans(".home .plans");
+	animateProvider(".provider");
+	animatePlans(".plans");
 	animateFooter("footer");
+	animateProps("section.props");
 });
 const slideDown = {
 	opacity: 0,
@@ -222,16 +223,23 @@ function animateServices(section) {
 }
 function animateProvider(section) {
 	if (document.querySelector(section)) {
-		createTimeline(section)
+		const time = createTimeline(section);
+		time
 			.from(`${section} h2`, slideLeft)
-			.to(
+			.from(`${section} .img-holder img`, appear, delay);
+		if (document.querySelector(`${section} .btn`)) {
+			time.to(
 				`${section} .btn`,
 				{
 					x: 0,
+					duration: 0.7,
 				},
 				delay
-			)
-			.from(`${section} img`, appear, delay);
+			);
+		}
+		if (document.querySelector(`${section} .badges`)) {
+			time.from(`${section} .badges a`, appearStagger, delay);
+		}
 	}
 }
 function animatePlans(section) {
@@ -255,6 +263,13 @@ function animateFooter(section) {
 				slideDownStager,
 				delay
 			);
+	}
+}
+function animateProps(section) {
+	if (document.querySelector(section)) {
+		createTimeline(section)
+			.from(`${section} h2`, slideDown)
+			.from(`${section} .feature`, slideDownStager, delay);
 	}
 }
 // End Animations
