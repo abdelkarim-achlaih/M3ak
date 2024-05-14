@@ -475,6 +475,9 @@ header .container-xxl .socials .nav-link svg {
 }
 /* End Hero */
 /* Start About */
+.about {
+  overflow: hidden;
+}
 .about .text-copy ul li {
   line-height: 28px;
   padding: 20px 58px 20px 20px;
