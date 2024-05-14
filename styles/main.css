@@ -565,6 +565,7 @@ header .container-xxl .socials .nav-link svg {
 /* Start How */
 .how {
   margin-top: 100px;
+  overflow: hidden;
 }
 @media (min-width: 1400px) {
   .how .section-title h2 {
@@ -621,6 +622,7 @@ header .container-xxl .socials .nav-link svg {
 .services,
 .services-services {
   margin-top: 100px;
+  overflow: hidden;
 }
 @media (min-width: 1400px) {
   .services h2,
@@ -640,6 +642,7 @@ header .container-xxl .socials .nav-link svg {
   height: 426px;
   padding: 25px 19px;
   transition-duration: 0.3s;
+  transform: scale(0);
 }
 .services .services-holder .service .service-icon,
 .services-services .services-holder .service .service-icon {
@@ -658,7 +661,7 @@ header .container-xxl .socials .nav-link svg {
 }
 .services .services-holder .service:hover,
 .services-services .services-holder .service:hover {
-  transform: scale(1.03);
+  transform: scale(1.03) !important;
 }
 .services .services-holder .service:hover .service-icon,
 .services-services .services-holder .service:hover .service-icon {
@@ -678,6 +681,7 @@ header .container-xxl .socials .nav-link svg {
 .services .services-holder a,
 .services-services .services-holder a {
   width: 262px;
+  transform: translateX(-1000px);
 }
 .services .services-holder.marg,
 .services-services .services-holder.marg {

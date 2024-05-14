@@ -578,6 +578,7 @@ header {
 /* Start How */
 .how {
   margin-top: 100px;
+  overflow: hidden;
 
   .section-title {
     h2 {
@@ -680,6 +681,7 @@ header {
 .services,
 .services-services {
   margin-top: 100px;
+  overflow: hidden;
 
   h2 {
     @include font-size(40px);
@@ -691,6 +693,7 @@ header {
       height: 426px;
       padding: 25px 19px;
       transition-duration: $transitionDuration;
+      transform: scale(0);
 
       .service-icon {
         position: relative;
@@ -708,7 +711,7 @@ header {
       }
 
       &:hover {
-        transform: scale(1.03);
+        transform: scale(1.03) !important;
 
         .service-icon {
           right: 50%;
@@ -729,6 +732,7 @@ header {
 
     a {
       width: 262px;
+      transform: translateX(-1000px);
     }
 
     &.marg {

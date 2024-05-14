@@ -34,8 +34,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
 	gsap.registerPlugin(ScrollTrigger);
 	animateHeader();
 	animateHero();
-	animateAbout();
-	animateHow();
+	animateAbout(".about");
+	animateHow(".how");
+	animateServices(".services");
 });
 const slideDown = {
 	opacity: 0,
@@ -53,6 +54,15 @@ const slideLeft = {
 const slideRight = {
 	opacity: 0,
 	x: -1500,
+};
+const appear = {
+	scale: 0,
+	duration: 0.65,
+};
+const appearStagger = {
+	scale: 0,
+	duration: 0.65,
+	stagger: 0.3,
 };
 function animateHeader() {
 	let load = gsap.timeline({
@@ -99,26 +109,17 @@ function animateHero() {
 			y: 150,
 		});
 }
-function animateAbout() {
-	let load = gsap.timeline({
-		scrollTrigger: {
-			trigger: "section.about",
-		},
-		defaults: {
-			duration: 1.5,
-			ease: "power4.inOut",
-		},
-	});
-	load
-		.from("section.about .section-question", {
+function animateAbout(section) {
+	createTimeline(section)
+		.from(`${section} .section-question`, {
 			x: 1500,
 		})
-		.from("section.about h2", {
+		.from(`${section} h2`, {
 			opacity: 0,
 			y: -50,
 		})
 		.from(
-			"section.about img",
+			`${section} img`,
 			{
 				opacity: 0,
 				x: -1500,
@@ -126,13 +127,13 @@ function animateAbout() {
 			},
 			"<"
 		)
-		.from("section.about ul li", {
+		.from(`${section} ul li`, {
 			opacity: 0,
 			y: -50,
 			stagger: 0.3,
 		})
 		.from(
-			"section.about .stats, section.about .decoration",
+			`${section} .stats, section.about .decoration`,
 			{
 				opacity: 0,
 				x: -1500,
@@ -140,9 +141,8 @@ function animateAbout() {
 			"<"
 		);
 }
-function animateHow() {
-	const section = ".how";
-	let load = gsap.timeline({
+function createTimeline(section) {
+	return gsap.timeline({
 		scrollTrigger: {
 			trigger: section,
 		},
@@ -151,13 +151,24 @@ function animateHow() {
 			ease: "power4.inOut",
 		},
 	});
-	load
+}
+function animateHow(section) {
+	createTimeline(section)
 		.from(`${section} .section-question`, slideDown)
 		.from(`${section} h2`, slideDown)
-		.from(`${section} img`, {
-			scale: 0,
-			duration: 0.65,
-		})
+		.from(`${section} img`, appear)
 		.from(`${section} .step`, slideDownStager);
+}
+function animateServices(section) {
+	createTimeline(section)
+		.from(`${section} .section-question`, slideLeft)
+		.from(`${section} h2`, slideLeft)
+		.to(`${section} .service`, {
+			scale: 1,
+			stagger: 0.15,
+		})
+		.to(`${section} .btn`, {
+			x: 0,
+		});
 }
 // End Animations
