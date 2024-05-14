@@ -768,6 +768,7 @@ $classes: one, two, three, four, five, six, seven, eight;
 
 /* Start Provider */
 .provider {
+  overflow: hidden;
   margin-top: 100px;
   margin-bottom: 100px;
 
@@ -776,6 +777,10 @@ $classes: one, two, three, four, five, six, seven, eight;
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center center;
+  }
+
+  .btn {
+    transform: translateX(1000px);
   }
 
   .text-copy,

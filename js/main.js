@@ -37,6 +37,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
 	animateAbout(".about");
 	animateHow(".how");
 	animateServices(".services");
+	animateProvider(".provider");
+	animatePlans(".plans");
 });
 const slideDown = {
 	opacity: 0,
@@ -170,5 +172,20 @@ function animateServices(section) {
 		.to(`${section} .btn`, {
 			x: 0,
 		});
+}
+function animateProvider(section) {
+	createTimeline(section)
+		.from(`${section} h2`, slideLeft)
+		.to(`${section} .btn`, {
+			x: 0,
+		})
+		.from(`${section} img`, appear, "<");
+}
+function animatePlans(section) {
+	createTimeline(section)
+		.from(`${section} .section-question`, slideDown)
+		.from(`${section} h2`, slideDown)
+		.from(`${section} .plan`, slideDownStager)
+		.from(`${section} .switcher`, appear);
 }
 // End Animations
