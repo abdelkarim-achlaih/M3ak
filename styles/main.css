@@ -565,6 +565,10 @@ header .container-xxl .socials .nav-link svg {
   z-index: -1;
 }
 
+.page.about {
+  margin-top: unset;
+}
+
 /* End About */
 /* Start How */
 .how {
@@ -708,6 +712,10 @@ header .container-xxl .socials .nav-link svg {
   border-top-right-radius: 50px;
   border-bottom-right-radius: 241px 76px;
   border-bottom-left-radius: 50px;
+}
+
+.page.services {
+  margin-top: unset;
 }
 
 .service.one {
