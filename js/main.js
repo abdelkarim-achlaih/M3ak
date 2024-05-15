@@ -31,6 +31,10 @@ if (switcher) {
 
 // Start Animations
 document.addEventListener("DOMContentLoaded", (event) => {
+	document.body.style.display = "block";
+	loadAnimations();
+});
+function loadAnimations() {
 	gsap.registerPlugin(ScrollTrigger);
 	animateHeader();
 	animateHero();
@@ -46,7 +50,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 	animatePageTitle(".page-title");
 	animatePostLoop(".blog-archive");
 	animateSinglePost(".page.post");
-});
+}
 const slideDown = {
 	opacity: 0,
 	y: -50,

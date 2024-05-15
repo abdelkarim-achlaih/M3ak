@@ -1402,4 +1402,7 @@ footer .copyrights a:hover {
   }
 }
 
-/* End Post *//*# sourceMappingURL=main.css.map */
+/* End Post */
+body {
+  display: none;
+}/*# sourceMappingURL=main.css.map */
