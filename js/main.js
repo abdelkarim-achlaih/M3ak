@@ -43,6 +43,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
 	animateFooter("footer");
 	animateProps("section.props");
 	animateContact(".contact");
+	animatePageTitle(".page-title");
+	animatePostLoop(".blog-archive");
+	animateSinglePost(".page.post");
 });
 const slideDown = {
 	opacity: 0,
@@ -280,6 +283,25 @@ function animateProps(section) {
 function animateContact(section) {
 	if (document.querySelector(section)) {
 		createTimeline(section).from(`${section} .colmun`, slideDownStager);
+	}
+}
+function animatePageTitle(section) {
+	if (document.querySelector(section)) {
+		createTimeline(section).from(`${section} h1`, slideDown);
+	}
+}
+function animatePostLoop(section) {
+	if (document.querySelector(section)) {
+		createTimeline(section).from(`${section} .blog-post`, slideDownStager);
+	}
+}
+function animateSinglePost(section) {
+	if (document.querySelector(section)) {
+		createTimeline(section)
+			.from(`${section} .top > div`, slideDownStager, delay)
+			.from(`${section} .featured-image`, slideDown, delay)
+			.from(`${section} .post-category`, slideDown, delay)
+			.from(`${section} .post-content p`, slideDownStager, delay);
 	}
 }
 // End Animations
