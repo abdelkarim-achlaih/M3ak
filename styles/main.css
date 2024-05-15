@@ -1274,6 +1274,12 @@ footer .copyrights a:hover {
   line-height: 30px;
   margin-bottom: 48px;
 }
+@media (max-width: 991px) {
+  .terms h3,
+  .terms p {
+    text-align: start;
+  }
+}
 
 /* End Terms */
 /* Start blog-archive */
@@ -1331,12 +1337,69 @@ footer .copyrights a:hover {
     text-align: start;
   }
 }
-.blog-archive .blog-post .blog-info .time {
+
+.time {
   color: #828282;
 }
-.blog-archive .blog-post .blog-info .time svg {
+.time svg {
   font-size: 20px;
   margin-bottom: 5px;
 }
 
-/* End blog-archive *//*# sourceMappingURL=main.css.map */
+/* End blog-archive */
+/* Start Post */
+.page.post .share span {
+  font-size: 20px;
+}
+.page.post .share a {
+  width: 45px;
+  height: 45px;
+  background-color: #F2F2F2;
+  border-radius: 50%;
+  font-size: 20px;
+  transition: 0.3s;
+}
+.page.post .share a:hover {
+  background-color: #FFAF04;
+  color: white;
+}
+.page.post .featured-image {
+  height: 500px;
+  overflow: hidden;
+}
+.page.post .featured-image img {
+  height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
+  width: 100%;
+}
+.page.post .post-category {
+  border-radius: 8px;
+  padding: 10px;
+  background-image: linear-gradient(90deg, #FFAF04 -0.01%, #F98429 52%);
+  transition: 0.3s;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.page.post .post-category a {
+  color: white;
+  text-decoration: none;
+}
+.page.post .post-category:hover {
+  background-image: none;
+  background-color: black;
+}
+.page.post p {
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 30px;
+}
+@media (max-width: 991px) {
+  .page.post p {
+    text-align: start;
+  }
+}
+
+/* End Post *//*# sourceMappingURL=main.css.map */

@@ -1340,6 +1340,13 @@ footer {
     line-height: 30px;
     margin-bottom: 48px;
   }
+
+  h3,
+  p {
+    @include breakpoints('md') {
+      text-align: start;
+    }
+  }
 }
 
 /* End Terms */
@@ -1417,16 +1424,82 @@ footer {
         }
       }
 
-      .time {
-        color: #828282;
-
-        svg {
-          font-size: 20px;
-          margin-bottom: 5px;
-        }
-      }
     }
   }
 }
 
+.time {
+  color: #828282;
+
+  svg {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+}
+
 /* End blog-archive */
+/* Start Post */
+.page.post {
+  .share {
+    span {
+      font-size: 20px;
+
+    }
+
+    a {
+      width: 45px;
+      height: 45px;
+      background-color: #F2F2F2;
+      border-radius: 50%;
+      font-size: 20px;
+      transition: $transitionDuration;
+
+      &:hover {
+        background-color: $mainYellow;
+        color: white;
+      }
+    }
+  }
+
+  .featured-image {
+    height: 500px;
+    overflow: hidden;
+
+    img {
+      height: 500px;
+      object-fit: cover;
+      object-position: 50% 50%;
+      width: 100%;
+    }
+  }
+
+  .post-category {
+    border-radius: 8px;
+    padding: 10px;
+    background-image: $mainGradientYellow;
+    transition: $transitionDuration;
+    width: fit-content;
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+
+    &:hover {
+      background-image: none;
+      background-color: black;
+    }
+  }
+
+  p {
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 30px;
+
+    @include breakpoints('md') {
+      text-align: start;
+    }
+  }
+}
+
+/* End Post */
