@@ -1343,3 +1343,90 @@ footer {
 }
 
 /* End Terms */
+/* Start blog-archive */
+.blog-archive {
+  .blog-post {
+    overflow: hidden;
+    border-radius: 8px 8px 0 0;
+
+    .blog-img {
+      position: relative;
+      overflow: hidden;
+
+      img {
+        transition: $transitionDuration;
+      }
+
+      .category {
+        position: absolute;
+        border-radius: 8px;
+        left: 14px;
+        bottom: 14px;
+        padding: 10px;
+        background-image: $mainGradientYellow;
+        transition: $transitionDuration;
+
+        a {
+          color: white;
+          text-decoration: none;
+        }
+
+        &:hover {
+          background-image: none;
+          background-color: black;
+        }
+      }
+    }
+
+    &:hover {
+      .blog-img {
+
+        img {
+          transform: scale(1.05);
+        }
+      }
+    }
+
+    .blog-info {
+      h2 {
+        font-size: 20px;
+
+
+        a {
+          text-decoration: none;
+          color: black;
+
+          &::after {
+            width: 0;
+            bottom: -7.5px;
+            height: 4px;
+            right: 0;
+            transform: unset;
+          }
+
+          &:hover::after {
+            width: 40px;
+          }
+        }
+      }
+
+      h2,
+      p {
+        @include breakpoints('md') {
+          text-align: start;
+        }
+      }
+
+      .time {
+        color: #828282;
+
+        svg {
+          font-size: 20px;
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+}
+
+/* End blog-archive */

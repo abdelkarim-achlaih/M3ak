@@ -1275,4 +1275,68 @@ footer .copyrights a:hover {
   margin-bottom: 48px;
 }
 
-/* End Terms *//*# sourceMappingURL=main.css.map */
+/* End Terms */
+/* Start blog-archive */
+.blog-archive .blog-post {
+  overflow: hidden;
+  border-radius: 8px 8px 0 0;
+}
+.blog-archive .blog-post .blog-img {
+  position: relative;
+  overflow: hidden;
+}
+.blog-archive .blog-post .blog-img img {
+  transition: 0.3s;
+}
+.blog-archive .blog-post .blog-img .category {
+  position: absolute;
+  border-radius: 8px;
+  left: 14px;
+  bottom: 14px;
+  padding: 10px;
+  background-image: linear-gradient(90deg, #FFAF04 -0.01%, #F98429 52%);
+  transition: 0.3s;
+}
+.blog-archive .blog-post .blog-img .category a {
+  color: white;
+  text-decoration: none;
+}
+.blog-archive .blog-post .blog-img .category:hover {
+  background-image: none;
+  background-color: black;
+}
+.blog-archive .blog-post:hover .blog-img img {
+  transform: scale(1.05);
+}
+.blog-archive .blog-post .blog-info h2 {
+  font-size: 20px;
+}
+.blog-archive .blog-post .blog-info h2 a {
+  text-decoration: none;
+  color: black;
+}
+.blog-archive .blog-post .blog-info h2 a::after {
+  width: 0;
+  bottom: -7.5px;
+  height: 4px;
+  right: 0;
+  transform: unset;
+}
+.blog-archive .blog-post .blog-info h2 a:hover::after {
+  width: 40px;
+}
+@media (max-width: 991px) {
+  .blog-archive .blog-post .blog-info h2,
+  .blog-archive .blog-post .blog-info p {
+    text-align: start;
+  }
+}
+.blog-archive .blog-post .blog-info .time {
+  color: #828282;
+}
+.blog-archive .blog-post .blog-info .time svg {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+/* End blog-archive *//*# sourceMappingURL=main.css.map */
