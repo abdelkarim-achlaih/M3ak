@@ -88,7 +88,7 @@
   }
 }
 
-//  Use this mixin for responsive breakpoints
+//  Use this mixin for responsive Properties
 $breakpoints: (
   // xs: 0,
   sm: 576px,
@@ -97,72 +97,6 @@ $breakpoints: (
   xl: 1200px,
   xxl: 1400px
 );
-
-@mixin responsive-font-size($font-sizes: (xxl: (h1: 40px,
-      h2: 32px,
-      h3: 28px,
-      h4: 24px,
-      h5: 20px,
-      h6: 16px,
-      p: 20px,
-      div: 20px,
-      a: 16px,
-      li: 16px,
-      button: 16px),
-    xs: (h1: 32px,
-      h2: 24px,
-      h3: 20px,
-      h4: 18px,
-      h5: 16px,
-      h6: 14px,
-      p: 16px,
-      a: 16px,
-      div: 16px,
-      li: 16px,
-      button: 16px))) {
-
-  // Font sizes for xxl screens
-  @media (min-width: map-get($breakpoints, xxl)) {
-
-    @each $element,
-    $size in map-get($font-sizes, xxl) {
-      #{$element} {
-        font-size: $size;
-      }
-    }
-  }
-
-  // Font sizes for other breakpoints
-  @each $breakpoint,
-  $sizes in $font-sizes {
-    @if $breakpoint !=xxl {
-      $prev-breakpoint: null;
-      $prev-sizes: null;
-
-      // Find the previous breakpoint
-      @each $b,
-      $s in $font-sizes {
-        @if $b !=$breakpoint and $b !=sm and ($prev-breakpoint ==null or $b > $prev-breakpoint) {
-          $prev-breakpoint: $b;
-          $prev-sizes: $s;
-        }
-      }
-
-      @media (min-width: map-get($breakpoints, $breakpoint)) {
-
-        @each $element,
-        $size in $sizes {
-          $prev-size: map-get($prev-sizes, $element);
-          $size: calc(#{$prev-size} + ($size - $prev-size) * ((100vw - #{map-get($breakpoints, $prev-breakpoint)}) / (#{map-get($breakpoints, $breakpoint)} - #{map-get($breakpoints, $prev-breakpoint)})));
-
-          #{$element} {
-            font-size: $size;
-          }
-        }
-      }
-    }
-  }
-}
 
 @function get-index-from-value($list, $value) {
   @for $i from 1 through length($list) {
@@ -230,6 +164,30 @@ $sm-breakpoint: map-get($breakpoints, sm);
       // --#{$property-name}: #{$result};
       // #{$property-name}: var(--#{$property-name});
       #{$property-name}: #{$result};
+    }
+  }
+}
+
+// Use this mixin for responsive-font-size
+
+@mixin responsive-font-size() {
+
+  $elements: (h1: (40px, 26px),
+    h2: (32px, 20px),
+    h3: (28px, 18px),
+    h4: (24px, 16px),
+    // h5: (20px, 16px),
+    // h6: (16px, 14px),
+    p: (20px, 15px),
+    div: (20px, 16px),
+    a: (16px, 15px),
+    li: (16px, 15px),
+    button: (20px, 14px));
+
+  @each $element,
+  $values in $elements {
+    #{$element} {
+      @include responsive(nth($values, 1), nth($values, 2), font-size);
     }
   }
 }

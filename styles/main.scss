@@ -45,6 +45,8 @@ body {
   // background-color: $main;
 }
 
+@include responsive-font-size();
+
 ul {
   list-style: none;
   margin: 0;
@@ -74,7 +76,8 @@ a.btn,
   // /*font-size: 24px;*/
   /*/*@include font-size(24px)*/
   // padding: 23px 21px;
-  @include responsive((20px, 10px), (5px, 2.5px), padding);
+  @include responsive((20px, 10px), (5px, 10px), padding);
+  @include responsive(20px, 14px, font-size);
   transition: $transitionDuration;
   border-radius: 16px;
 
@@ -195,7 +198,8 @@ header {
 
     .navbar-brand {
       img {
-        max-width: 167px;
+        // max-width: 167px;
+        @include responsive(167px, 120px, max-width)
       }
     }
 
@@ -235,8 +239,8 @@ header {
     .socials {
 
       .nav-link {
-        width: 48px;
-        height: 48px;
+        @include responsive(48px, 25px, width);
+        @include responsive(48px, 25px, height);
         background-color: transparent;
         background-image: $mainGradientYellow;
         border-radius: 50%;
@@ -248,8 +252,9 @@ header {
         }
 
         svg {
-          font-size: 22px;
+          // font-size: 22px;
           // @include font-size(22px);
+          @include responsive(22px, 15px, font-size);
           color: white;
         }
       }
@@ -312,8 +317,9 @@ header {
         .badges {
           img {
             min-width: 60px;
-            width: 25vh;
-            max-width: 245px;
+            // width: 25vh;
+            // max-width: 245px;
+            @include responsive(200px, 120px, width);
             transition: $transitionDuration;
 
             &:hover {
@@ -334,6 +340,7 @@ header {
           left: 0;
           width: 100%;
           height: 75vh;
+          @include responsive(75vh, 50vh, height);
 
           @include breakpoints("md") {
             position: relative;
@@ -368,7 +375,8 @@ header {
           z-index: 299;
 
           img {
-            height: 75vh;
+            // height: 75vh;
+            @include responsive(75vh, 50vh, height)
           }
         }
       }
@@ -416,13 +424,15 @@ header {
     }
 
     .s-button {
-      padding: 51px 33px;
+      // padding: 51px 33px;
+      @include responsive((51px, 33px), (15px, 10px), padding);
       background-color: white;
       border-radius: 1000px;
       box-shadow: 0 4px 75px 0 rgba($color: #000000, $alpha: 0.1);
 
       svg {
-        font-size: 35px;
+        // font-size: 35px;
+        @include responsive(35px, 20px, font-size);
         animation: bounce 2s infinite 2s;
       }
     }
@@ -438,15 +448,18 @@ header {
 
     .feature-icon {
       background-image: $secondGradientYellow;
-      width: 113px;
-      height: 113px;
+      // width: 113px;
+      // height: 113px;
+      @include responsive(113px, 50px, width);
+      @include responsive(113px, 50px, height);
       border-radius: 50%;
       margin-bottom: 30px;
       margin-right: auto;
       margin-left: auto;
 
       svg {
-        font-size: 33px;
+        // font-size: 33px;
+        @include responsive(33px, 18px, height);
       }
     }
 
@@ -490,11 +503,11 @@ header {
   }
 
   40% {
-    transform: translateY(-35px);
+    transform: translateY(-15px);
   }
 
   60% {
-    transform: translateY(-25px);
+    transform: translateY(-5px);
   }
 }
 
