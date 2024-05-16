@@ -90,7 +90,7 @@
 
 //  Use this mixin for responsive breakpoints
 $breakpoints: (
-  xs: 0,
+  // xs: 0,
   sm: 576px,
   md: 768px,
   lg: 992px,
@@ -160,6 +160,76 @@ $breakpoints: (
           }
         }
       }
+    }
+  }
+}
+
+@function get-index-from-value($list, $value) {
+  @for $i from 1 through length($list) {
+    @if nth($list, $i)==$value {
+      @return $i;
+    }
+  }
+
+  @return null; // If value not found
+}
+
+@function concatenate-list($list, $separator) {
+  $result: "";
+  $list-length: length($list);
+
+  @for $i from 1 through $list-length {
+    $item: nth($list, $i);
+    $result: $result +$item;
+
+    @if $i !=$list-length {
+      $result: $result +$separator;
+    }
+  }
+
+  @return unquote($result);
+}
+
+$breaks: (
+  // xs: 0,
+  sm: 576,
+  md: 768,
+  lg: 992,
+  xl: 1200,
+  xxl: 1400
+);
+$xxl-breakpoint: map-get($breakpoints, xxl);
+
+$sm-breakpoint: map-get($breakpoints, sm);
+
+@mixin responsive($xxl-values, $sm-values, $property-name) {
+
+  @media (max-width: $sm-breakpoint) {
+    #{$property-name}: #{concatenate-list($sm-values, " ")};
+  }
+
+  @each $breakpoint_name,
+  $breakpoint_value in $breakpoints {
+    $breakpoint-sizes: ();
+    $break: map-get($breaks, $breakpoint_name);
+
+    @each $xxl-value in $xxl-values {
+      $sm-value: nth($sm-values, get-index-from-value($xxl-values, $xxl-value));
+      // $breakpoint-size: calc(#{$xxl-value} + (($sm-value - $xxl-value) * ((#{$break} - #{map-get($breaks, xxl)}) / (#{$break} - #{map-get($breaks, sm)})))); Old not working
+      // $breakpoint-size: $sm-value * (#{map-get($breaks, xxl)} - #{$break}) + $xxl-value * (#{$break} - #{map-get($breaks, sm)}); Tooooooop
+      // $breakpoint-size: #{map-get($breaks, xxl)} - #{map-get($breaks, sm)}; Botooooooooooom
+      $breakpoint-size: calc(($sm-value * (map-get($breaks, xxl) - $break) + $xxl-value * ($break - map-get($breaks, sm)))/(map-get($breaks, xxl) - map-get($breaks, sm)));
+
+      $breakpoint-sizes: append($breakpoint-sizes, $breakpoint-size);
+    }
+
+    $result: concatenate-list($breakpoint-sizes, " ");
+
+    @media (min-width: $breakpoint_value) {
+      // /*#{$breakpoint_name} -- Breakpoint*/
+      // --#{$property-name}: #{$result};
+      // #{$property-name}: var(--#{$property-name});
+      #{$property-name}: #{$result};
     }
   }
 }

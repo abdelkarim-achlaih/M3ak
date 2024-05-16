@@ -17,7 +17,7 @@
   font-weight: 600;
 }
 
-@include responsive-font-size();
+// @include responsive-font-size();
 /* End Importing Fonts */
 
 /* Start Variables */
@@ -74,7 +74,7 @@ a.btn,
   // /*font-size: 24px;*/
   /*/*@include font-size(24px)*/
   // padding: 23px 21px;
-
+  @include responsive((20px, 10px), (5px, 2.5px), padding);
   transition: $transitionDuration;
   border-radius: 16px;
 

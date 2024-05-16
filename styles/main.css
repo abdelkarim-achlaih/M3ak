@@ -9,76 +9,6 @@
   src: url("../assets/fonts/SuisseIntl-Bold.otf");
   font-weight: 600;
 }
-@media (min-width: 1400px) {
-  h1 {
-    font-size: 40px;
-  }
-  h2 {
-    font-size: 32px;
-  }
-  h3 {
-    font-size: 28px;
-  }
-  h4 {
-    font-size: 24px;
-  }
-  h5 {
-    font-size: 20px;
-  }
-  h6 {
-    font-size: 16px;
-  }
-  p {
-    font-size: 20px;
-  }
-  div {
-    font-size: 20px;
-  }
-  a {
-    font-size: 16px;
-  }
-  li {
-    font-size: 16px;
-  }
-  button {
-    font-size: 16px;
-  }
-}
-@media (min-width: 0) {
-  h1 {
-    font-size: calc(40px + -8px * (100vw - 1400px) / (0 - 1400px));
-  }
-  h2 {
-    font-size: calc(32px + -8px * (100vw - 1400px) / (0 - 1400px));
-  }
-  h3 {
-    font-size: calc(28px + -8px * (100vw - 1400px) / (0 - 1400px));
-  }
-  h4 {
-    font-size: calc(24px + -6px * (100vw - 1400px) / (0 - 1400px));
-  }
-  h5 {
-    font-size: calc(20px + -4px * (100vw - 1400px) / (0 - 1400px));
-  }
-  h6 {
-    font-size: calc(16px + -2px * (100vw - 1400px) / (0 - 1400px));
-  }
-  p {
-    font-size: calc(20px + -4px * (100vw - 1400px) / (0 - 1400px));
-  }
-  a {
-    font-size: calc(16px + 0px * (100vw - 1400px) / (0 - 1400px));
-  }
-  div {
-    font-size: calc(20px + -4px * (100vw - 1400px) / (0 - 1400px));
-  }
-  li {
-    font-size: calc(16px + 0px * (100vw - 1400px) / (0 - 1400px));
-  }
-  button {
-    font-size: calc(16px + 0px * (100vw - 1400px) / (0 - 1400px));
-  }
-}
 /* End Importing Fonts */
 /* Start Variables */
 /* End Variables */
@@ -122,6 +52,48 @@ a.btn,
   /*/*@include font-size(24px)*/
   transition: 0.3s;
   border-radius: 16px;
+}
+@media (max-width: 576px) {
+  button.btn,
+  a.btn,
+  .btn {
+    padding: 5px 2.5px;
+  }
+}
+@media (min-width: 576px) {
+  button.btn,
+  a.btn,
+  .btn {
+    padding: 5px 2.5px;
+  }
+}
+@media (min-width: 768px) {
+  button.btn,
+  a.btn,
+  .btn {
+    padding: 8.4951456311px 4.2475728155px;
+  }
+}
+@media (min-width: 992px) {
+  button.btn,
+  a.btn,
+  .btn {
+    padding: 12.572815534px 6.286407767px;
+  }
+}
+@media (min-width: 1200px) {
+  button.btn,
+  a.btn,
+  .btn {
+    padding: 16.359223301px 8.1796116505px;
+  }
+}
+@media (min-width: 1400px) {
+  button.btn,
+  a.btn,
+  .btn {
+    padding: 20px 10px;
+  }
 }
 button.btn:hover,
 a.btn:hover,
