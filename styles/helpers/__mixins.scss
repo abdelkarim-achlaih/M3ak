@@ -1,4 +1,6 @@
 // Use these mixins only between the specified breakpoints
+@use "sass:string";
+@use 'sass:list';
 
 @mixin breakpoints_xs() {
   @media (max-width: 575px) {
@@ -83,5 +85,81 @@
 
   @include breakpoints('xl') {
     font-size: calc($base - 0.45vw);
+  }
+}
+
+//  Use this mixin for responsive breakpoints
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+@mixin responsive-font-size($font-sizes: (xxl: (h1: 40px,
+      h2: 32px,
+      h3: 28px,
+      h4: 24px,
+      h5: 20px,
+      h6: 16px,
+      p: 20px,
+      div: 20px,
+      a: 16px,
+      li: 16px,
+      button: 16px),
+    xs: (h1: 32px,
+      h2: 24px,
+      h3: 20px,
+      h4: 18px,
+      h5: 16px,
+      h6: 14px,
+      p: 16px,
+      a: 16px,
+      div: 16px,
+      li: 16px,
+      button: 16px))) {
+
+  // Font sizes for xxl screens
+  @media (min-width: map-get($breakpoints, xxl)) {
+
+    @each $element,
+    $size in map-get($font-sizes, xxl) {
+      #{$element} {
+        font-size: $size;
+      }
+    }
+  }
+
+  // Font sizes for other breakpoints
+  @each $breakpoint,
+  $sizes in $font-sizes {
+    @if $breakpoint !=xxl {
+      $prev-breakpoint: null;
+      $prev-sizes: null;
+
+      // Find the previous breakpoint
+      @each $b,
+      $s in $font-sizes {
+        @if $b !=$breakpoint and $b !=sm and ($prev-breakpoint ==null or $b > $prev-breakpoint) {
+          $prev-breakpoint: $b;
+          $prev-sizes: $s;
+        }
+      }
+
+      @media (min-width: map-get($breakpoints, $breakpoint)) {
+
+        @each $element,
+        $size in $sizes {
+          $prev-size: map-get($prev-sizes, $element);
+          $size: calc(#{$prev-size} + ($size - $prev-size) * ((100vw - #{map-get($breakpoints, $prev-breakpoint)}) / (#{map-get($breakpoints, $breakpoint)} - #{map-get($breakpoints, $prev-breakpoint)})));
+
+          #{$element} {
+            font-size: $size;
+          }
+        }
+      }
+    }
   }
 }

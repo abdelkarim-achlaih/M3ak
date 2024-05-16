@@ -17,6 +17,7 @@
   font-weight: 600;
 }
 
+@include responsive-font-size();
 /* End Importing Fonts */
 
 /* Start Variables */
@@ -70,9 +71,10 @@ a.btn,
   background-color: rgba(22, 24, 27, 1);
   color: white;
   font-weight: 600;
-  // font-size: 24px;
-  @include font-size(24px);
-  padding: 23px 21px 23px 21px;
+  // /*font-size: 24px;*/
+  /*/*@include font-size(24px)*/
+  // padding: 23px 21px;
+
   transition: $transitionDuration;
   border-radius: 16px;
 
@@ -160,7 +162,7 @@ a {
 
 .section-question {
   padding: 12px 31px;
-  @include font-size(24px);
+  /*@include font-size(24px)*/
   color: #212936;
   border-radius: 1000px;
   background-color: #F4F4F4;
@@ -169,7 +171,7 @@ a {
 }
 
 h2 {
-  @include font-size(40px);
+  /*@include font-size(40px);*/
   line-height: 150%;
 }
 
@@ -200,8 +202,8 @@ header {
     .navigation {
       a {
         color: rgba(108, 108, 108, 1);
-        // font-size: 24px;
-        @include font-size(24px);
+        // /*font-size: 24px;*/
+        /*/*@include font-size(24px)*/
         transition: $transitionDuration;
         position: relative;
 
@@ -247,7 +249,7 @@ header {
 
         svg {
           font-size: 22px;
-          @include font-size(22px);
+          // @include font-size(22px);
           color: white;
         }
       }
@@ -298,11 +300,11 @@ header {
       .text-copy {
 
         h1 {
-          @include font-size(40px);
+          /*@include font-size(40px);*/
         }
 
         &>p {
-          @include font-size(26px);
+          // @include font-size(26px);
           color: rgba(129, 129, 129, 1);
           line-height: 150%;
         }
@@ -450,7 +452,7 @@ header {
 
     p {
       font-weight: 600;
-      @include font-size(24px)
+      /*@include font-size(24px)*/
     }
   }
 
@@ -506,7 +508,7 @@ header {
 
     ul {
       li {
-        @include font-size(20px);
+        /*@include font-size(20px);*/
         line-height: 28px;
         padding: 20px 58px 20px 20px;
         background-color: #FAFAFA;
@@ -552,11 +554,11 @@ header {
 
         p:first-child {
           font-weight: 600;
-          @include font-size(36px)
+          /*@include font-size(36px)*/
         }
 
         p:last-child {
-          @include font-size(24px)
+          /*@include font-size(24px)*/
         }
       }
 
@@ -587,7 +589,8 @@ header {
 
   .section-title {
     h2 {
-      @include font-size(32px);
+      /*@include font-size(32px)*/
+
 
     }
   }
@@ -597,7 +600,7 @@ header {
       max-width: 300px;
 
       .number {
-        @include font-size(48px);
+        /*@include font-size(48px);*/
         color: white;
         width: 127px;
         height: 127px;
@@ -610,12 +613,12 @@ header {
       }
 
       p:first-child {
-        font-size: 24px;
+        /*font-size: 24px;*/
 
       }
 
       p:last-child {
-        font-size: 20px;
+        /*font-size: 20px;*/
         line-height: 30px;
         color: #787878;
       }
@@ -689,7 +692,7 @@ header {
   overflow: hidden;
 
   h2 {
-    @include font-size(40px);
+    /*@include font-size(40px);*/
   }
 
   .services-holder {
@@ -725,12 +728,12 @@ header {
       }
 
       .service-title {
-        font-size: 24px;
+        /*font-size: 24px;*/
       }
 
       p {
         margin-top: 24px;
-        font-size: 20px;
+        /*font-size: 20px;*/
         line-height: 30px;
       }
     }
@@ -802,7 +805,7 @@ $classes: one, two, three, four, five, six, seven, eight;
   }
 
   h2 {
-    font-size: 48px;
+    // font-size: 48px;
     line-height: 150%;
   }
 
@@ -843,7 +846,7 @@ $classes: one, two, three, four, five, six, seven, eight;
 
   .section-title {
     h2 {
-      @include font-size(32px);
+      /*@include font-size(32px)*/
 
     }
   }
@@ -857,7 +860,7 @@ $classes: one, two, three, four, five, six, seven, eight;
 
     .toog {
       width: 162px;
-      font-size: 24px;
+      font-size: 20px !important;
       text-align: center;
       padding-top: 19px;
       padding-bottom: 19px;
@@ -882,7 +885,7 @@ $classes: one, two, three, four, five, six, seven, eight;
       background-color: #FDECE2;
       border-radius: 1000px;
       width: 162px;
-      height: 74px;
+      height: 68px;
       top: 10px;
       z-index: 0;
       transition: $transitionDuration;
@@ -905,7 +908,7 @@ $classes: one, two, three, four, five, six, seven, eight;
       padding: 50px 16px 33px;
 
       .name {
-        font-size: 24px;
+        /*font-size: 24px;*/
         color: #747474;
       }
 
@@ -916,7 +919,7 @@ $classes: one, two, three, four, five, six, seven, eight;
         }
 
         .cur {
-          font-size: 20px;
+          /*font-size: 20px;*/
 
         }
       }
@@ -995,7 +998,7 @@ footer {
 
       a {
         text-decoration: none;
-        font-size: 20px;
+        /*font-size: 20px;*/
         color: white;
         display: block;
         position: relative;
@@ -1035,7 +1038,7 @@ footer {
     border-bottom: 1px solid #FFFFFF;
 
     h3 {
-      font-size: 20px;
+      /*font-size: 20px;*/
       background: $mainGradientYellow;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -1060,7 +1063,7 @@ footer {
 
         svg {
           font-size: 22px;
-          @include font-size(22px);
+          // @include font-size(22px);
           color: white;
         }
       }
@@ -1263,7 +1266,7 @@ footer {
 
         svg {
           color: $mainYellow;
-          font-size: 20px;
+          /*font-size: 20px;*/
         }
       }
 
@@ -1291,7 +1294,7 @@ footer {
       color: #787878;
       letter-spacing: 0.02em;
       line-height: 27.79px;
-      font-size: 24px;
+      /*font-size: 24px;*/
     }
 
     form {
@@ -1316,7 +1319,7 @@ footer {
 
       button {
         max-width: 788px;
-        font-size: 20px;
+        /*font-size: 20px;*/
 
         @include breakpoints('md') {
           max-width: unset;
@@ -1330,13 +1333,13 @@ footer {
 /* Start Terms */
 .terms {
   h3 {
-    font-size: 24px;
+    /*font-size: 24px;*/
     font-weight: 600;
     line-height: 28.8px;
   }
 
   p {
-    font-size: 20px;
+    /*font-size: 20px;*/
     line-height: 30px;
     margin-bottom: 48px;
   }
@@ -1396,7 +1399,7 @@ footer {
 
     .blog-info {
       h2 {
-        font-size: 20px;
+        /*font-size: 20px;*/
 
 
         a {
@@ -1432,7 +1435,7 @@ footer {
   color: #828282;
 
   svg {
-    font-size: 20px;
+    /*font-size: 20px;*/
     margin-bottom: 5px;
   }
 }
@@ -1442,7 +1445,7 @@ footer {
 .page.post {
   .share {
     span {
-      font-size: 20px;
+      /*font-size: 20px;*/
 
     }
 
@@ -1451,7 +1454,7 @@ footer {
       height: 45px;
       background-color: #F2F2F2;
       border-radius: 50%;
-      font-size: 20px;
+      /*font-size: 20px;*/
       transition: $transitionDuration;
 
       &:hover {
@@ -1492,7 +1495,7 @@ footer {
   }
 
   p {
-    font-size: 20px;
+    /*font-size: 20px;*/
     line-height: 30px;
     margin-bottom: 30px;
 

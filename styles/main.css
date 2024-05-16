@@ -9,6 +9,76 @@
   src: url("../assets/fonts/SuisseIntl-Bold.otf");
   font-weight: 600;
 }
+@media (min-width: 1400px) {
+  h1 {
+    font-size: 40px;
+  }
+  h2 {
+    font-size: 32px;
+  }
+  h3 {
+    font-size: 28px;
+  }
+  h4 {
+    font-size: 24px;
+  }
+  h5 {
+    font-size: 20px;
+  }
+  h6 {
+    font-size: 16px;
+  }
+  p {
+    font-size: 20px;
+  }
+  div {
+    font-size: 20px;
+  }
+  a {
+    font-size: 16px;
+  }
+  li {
+    font-size: 16px;
+  }
+  button {
+    font-size: 16px;
+  }
+}
+@media (min-width: 0) {
+  h1 {
+    font-size: calc(40px + -8px * (100vw - 1400px) / (0 - 1400px));
+  }
+  h2 {
+    font-size: calc(32px + -8px * (100vw - 1400px) / (0 - 1400px));
+  }
+  h3 {
+    font-size: calc(28px + -8px * (100vw - 1400px) / (0 - 1400px));
+  }
+  h4 {
+    font-size: calc(24px + -6px * (100vw - 1400px) / (0 - 1400px));
+  }
+  h5 {
+    font-size: calc(20px + -4px * (100vw - 1400px) / (0 - 1400px));
+  }
+  h6 {
+    font-size: calc(16px + -2px * (100vw - 1400px) / (0 - 1400px));
+  }
+  p {
+    font-size: calc(20px + -4px * (100vw - 1400px) / (0 - 1400px));
+  }
+  a {
+    font-size: calc(16px + 0px * (100vw - 1400px) / (0 - 1400px));
+  }
+  div {
+    font-size: calc(20px + -4px * (100vw - 1400px) / (0 - 1400px));
+  }
+  li {
+    font-size: calc(16px + 0px * (100vw - 1400px) / (0 - 1400px));
+  }
+  button {
+    font-size: calc(16px + 0px * (100vw - 1400px) / (0 - 1400px));
+  }
+}
 /* End Importing Fonts */
 /* Start Variables */
 /* End Variables */
@@ -49,23 +119,9 @@ a.btn,
   background-color: rgb(22, 24, 27);
   color: white;
   font-weight: 600;
-  padding: 23px 21px 23px 21px;
+  /*/*@include font-size(24px)*/
   transition: 0.3s;
   border-radius: 16px;
-}
-@media (min-width: 1400px) {
-  button.btn,
-  a.btn,
-  .btn {
-    font-size: 24px;
-  }
-}
-@media (max-width: 1399px) {
-  button.btn,
-  a.btn,
-  .btn {
-    font-size: calc(24px - 0.45vw);
-  }
 }
 button.btn:hover,
 a.btn:hover,
@@ -143,6 +199,7 @@ button.btn-gray {
 
 .section-question {
   padding: 12px 31px;
+  /*@include font-size(24px)*/
   color: #212936;
   border-radius: 1000px;
   background-color: #F4F4F4;
@@ -150,29 +207,10 @@ button.btn-gray {
   width: fit-content;
   margin-bottom: 25px;
 }
-@media (min-width: 1400px) {
-  .section-question {
-    font-size: 24px;
-  }
-}
-@media (max-width: 1399px) {
-  .section-question {
-    font-size: calc(24px - 0.45vw);
-  }
-}
 
 h2 {
+  /*@include font-size(40px);*/
   line-height: 150%;
-}
-@media (min-width: 1400px) {
-  h2 {
-    font-size: 40px;
-  }
-}
-@media (max-width: 1399px) {
-  h2 {
-    font-size: calc(40px - 0.45vw);
-  }
 }
 
 .test {
@@ -193,18 +231,9 @@ header .container-xxl .navbar-brand img {
 }
 header .container-xxl .navigation a {
   color: rgb(108, 108, 108);
+  /*/*@include font-size(24px)*/
   transition: 0.3s;
   position: relative;
-}
-@media (min-width: 1400px) {
-  header .container-xxl .navigation a {
-    font-size: 24px;
-  }
-}
-@media (max-width: 1399px) {
-  header .container-xxl .navigation a {
-    font-size: calc(24px - 0.45vw);
-  }
 }
 header .container-xxl .navigation a::after {
   content: "";
@@ -239,16 +268,6 @@ header .container-xxl .socials .nav-link:hover {
 header .container-xxl .socials .nav-link svg {
   font-size: 22px;
   color: white;
-}
-@media (min-width: 1400px) {
-  header .container-xxl .socials .nav-link svg {
-    font-size: 22px;
-  }
-}
-@media (max-width: 1399px) {
-  header .container-xxl .socials .nav-link svg {
-    font-size: calc(22px - 0.45vw);
-  }
 }
 
 /* End Header */
@@ -292,29 +311,12 @@ header .container-xxl .socials .nav-link svg {
     padding-top: 45px;
   }
 }
-@media (min-width: 1400px) {
-  .hero .container-xxl .section-container .text-copy h1 {
-    font-size: 40px;
-  }
-}
-@media (max-width: 1399px) {
-  .hero .container-xxl .section-container .text-copy h1 {
-    font-size: calc(40px - 0.45vw);
-  }
+.hero .container-xxl .section-container .text-copy h1 {
+  /*@include font-size(40px);*/
 }
 .hero .container-xxl .section-container .text-copy > p {
   color: rgb(129, 129, 129);
   line-height: 150%;
-}
-@media (min-width: 1400px) {
-  .hero .container-xxl .section-container .text-copy > p {
-    font-size: 26px;
-  }
-}
-@media (max-width: 1399px) {
-  .hero .container-xxl .section-container .text-copy > p {
-    font-size: calc(26px - 0.45vw);
-  }
 }
 .hero .container-xxl .section-container .text-copy .badges img {
   min-width: 60px;
@@ -436,16 +438,7 @@ header .container-xxl .socials .nav-link svg {
 }
 .features .feature p {
   font-weight: 600;
-}
-@media (min-width: 1400px) {
-  .features .feature p {
-    font-size: 24px;
-  }
-}
-@media (max-width: 1399px) {
-  .features .feature p {
-    font-size: calc(24px - 0.45vw);
-  }
+  /*@include font-size(24px)*/
 }
 .features.about .feature-icon {
   background-image: none;
@@ -483,21 +476,12 @@ header .container-xxl .socials .nav-link svg {
   margin-top: 100px;
 }
 .about .text-copy ul li {
+  /*@include font-size(20px);*/
   line-height: 28px;
   padding: 20px 58px 20px 20px;
   background-color: #FAFAFA;
   margin-bottom: 16px;
   position: relative;
-}
-@media (min-width: 1400px) {
-  .about .text-copy ul li {
-    font-size: 20px;
-  }
-}
-@media (max-width: 1399px) {
-  .about .text-copy ul li {
-    font-size: calc(20px - 0.45vw);
-  }
 }
 .about .text-copy ul li::before {
   content: "";
@@ -533,26 +517,10 @@ header .container-xxl .socials .nav-link svg {
 }
 .about .left .col-holder .stats p:first-child {
   font-weight: 600;
+  /*@include font-size(36px)*/
 }
-@media (min-width: 1400px) {
-  .about .left .col-holder .stats p:first-child {
-    font-size: 36px;
-  }
-}
-@media (max-width: 1399px) {
-  .about .left .col-holder .stats p:first-child {
-    font-size: calc(36px - 0.45vw);
-  }
-}
-@media (min-width: 1400px) {
-  .about .left .col-holder .stats p:last-child {
-    font-size: 24px;
-  }
-}
-@media (max-width: 1399px) {
-  .about .left .col-holder .stats p:last-child {
-    font-size: calc(24px - 0.45vw);
-  }
+.about .left .col-holder .stats p:last-child {
+  /*@include font-size(24px)*/
 }
 .about .left .col-holder .decoration {
   position: absolute;
@@ -575,44 +543,28 @@ header .container-xxl .socials .nav-link svg {
   margin-top: 100px;
   overflow: hidden;
 }
-@media (min-width: 1400px) {
-  .how .section-title h2 {
-    font-size: 32px;
-  }
-}
-@media (max-width: 1399px) {
-  .how .section-title h2 {
-    font-size: calc(32px - 0.45vw);
-  }
+.how .section-title h2 {
+  /*@include font-size(32px)*/
 }
 .how .steps .step {
   max-width: 300px;
 }
 .how .steps .step .number {
+  /*@include font-size(48px);*/
   color: white;
   width: 127px;
   height: 127px;
   background-color: #FC9918;
   border-radius: 16px;
 }
-@media (min-width: 1400px) {
-  .how .steps .step .number {
-    font-size: 48px;
-  }
-}
-@media (max-width: 1399px) {
-  .how .steps .step .number {
-    font-size: calc(48px - 0.45vw);
-  }
-}
 .how .steps .step p {
   padding-right: 8px;
 }
 .how .steps .step p:first-child {
-  font-size: 24px;
+  /*font-size: 24px;*/
 }
 .how .steps .step p:last-child {
-  font-size: 20px;
+  /*font-size: 20px;*/
   line-height: 30px;
   color: #787878;
 }
@@ -632,17 +584,9 @@ header .container-xxl .socials .nav-link svg {
   margin-top: 100px;
   overflow: hidden;
 }
-@media (min-width: 1400px) {
-  .services h2,
-  .services-services h2 {
-    font-size: 40px;
-  }
-}
-@media (max-width: 1399px) {
-  .services h2,
-  .services-services h2 {
-    font-size: calc(40px - 0.45vw);
-  }
+.services h2,
+.services-services h2 {
+  /*@include font-size(40px);*/
 }
 .services .services-holder .service,
 .services-services .services-holder .service {
@@ -678,12 +622,12 @@ header .container-xxl .socials .nav-link svg {
 }
 .services .services-holder .service .service-title,
 .services-services .services-holder .service .service-title {
-  font-size: 24px;
+  /*font-size: 24px;*/
 }
 .services .services-holder .service p,
 .services-services .services-holder .service p {
   margin-top: 24px;
-  font-size: 20px;
+  /*font-size: 20px;*/
   line-height: 30px;
 }
 .services .services-holder a,
@@ -825,7 +769,6 @@ header .container-xxl .socials .nav-link svg {
   }
 }
 .provider h2 {
-  font-size: 48px;
   line-height: 150%;
 }
 .provider.about, .provider.services-page {
@@ -853,15 +796,8 @@ header .container-xxl .socials .nav-link svg {
 .plans {
   margin-top: 100px;
 }
-@media (min-width: 1400px) {
-  .plans .section-title h2 {
-    font-size: 32px;
-  }
-}
-@media (max-width: 1399px) {
-  .plans .section-title h2 {
-    font-size: calc(32px - 0.45vw);
-  }
+.plans .section-title h2 {
+  /*@include font-size(32px)*/
 }
 .plans .switcher {
   border-radius: 1000px;
@@ -872,7 +808,7 @@ header .container-xxl .socials .nav-link svg {
 }
 .plans .switcher .toog {
   width: 162px;
-  font-size: 24px;
+  font-size: 20px !important;
   text-align: center;
   padding-top: 19px;
   padding-bottom: 19px;
@@ -896,7 +832,7 @@ header .container-xxl .socials .nav-link svg {
   background-color: #FDECE2;
   border-radius: 1000px;
   width: 162px;
-  height: 74px;
+  height: 68px;
   top: 10px;
   z-index: 0;
   transition: 0.3s;
@@ -914,7 +850,7 @@ header .container-xxl .socials .nav-link svg {
   padding: 50px 16px 33px;
 }
 .plans .plans-holder .plan .name {
-  font-size: 24px;
+  /*font-size: 24px;*/
   color: #747474;
 }
 .plans .plans-holder .plan .price .num {
@@ -922,7 +858,7 @@ header .container-xxl .socials .nav-link svg {
   margin-left: 10px;
 }
 .plans .plans-holder .plan .price .cur {
-  font-size: 20px;
+  /*font-size: 20px;*/
 }
 .plans .plans-holder .plan button {
   width: 100%;
@@ -973,7 +909,7 @@ footer {
 }
 footer .links li a {
   text-decoration: none;
-  font-size: 20px;
+  /*font-size: 20px;*/
   color: white;
   display: block;
   position: relative;
@@ -1008,7 +944,7 @@ footer .main-footer {
   border-bottom: 1px solid #FFFFFF;
 }
 footer .main-footer h3 {
-  font-size: 20px;
+  /*font-size: 20px;*/
   background: linear-gradient(90deg, #FFAF04 -0.01%, #F98429 52%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1030,16 +966,6 @@ footer .main-footer .socials .nav-link:hover {
 footer .main-footer .socials .nav-link svg {
   font-size: 22px;
   color: white;
-}
-@media (min-width: 1400px) {
-  footer .main-footer .socials .nav-link svg {
-    font-size: 22px;
-  }
-}
-@media (max-width: 1399px) {
-  footer .main-footer .socials .nav-link svg {
-    font-size: calc(22px - 0.45vw);
-  }
 }
 footer .main-footer .download img {
   width: 160px;
@@ -1213,7 +1139,7 @@ footer .copyrights a:hover {
 }
 .contact .info .info-rows .icon svg {
   color: #FFAF04;
-  font-size: 20px;
+  /*font-size: 20px;*/
 }
 .contact .info .info-rows p {
   margin-bottom: 7px;
@@ -1232,7 +1158,7 @@ footer .copyrights a:hover {
   color: #787878;
   letter-spacing: 0.02em;
   line-height: 27.79px;
-  font-size: 24px;
+  /*font-size: 24px;*/
 }
 .contact .form form input,
 .contact .form form textarea {
@@ -1254,7 +1180,7 @@ footer .copyrights a:hover {
 }
 .contact .form form button {
   max-width: 788px;
-  font-size: 20px;
+  /*font-size: 20px;*/
 }
 @media (max-width: 991px) {
   .contact .form form button {
@@ -1265,12 +1191,12 @@ footer .copyrights a:hover {
 /* End Contact */
 /* Start Terms */
 .terms h3 {
-  font-size: 24px;
+  /*font-size: 24px;*/
   font-weight: 600;
   line-height: 28.8px;
 }
 .terms p {
-  font-size: 20px;
+  /*font-size: 20px;*/
   line-height: 30px;
   margin-bottom: 48px;
 }
@@ -1315,7 +1241,7 @@ footer .copyrights a:hover {
   transform: scale(1.05);
 }
 .blog-archive .blog-post .blog-info h2 {
-  font-size: 20px;
+  /*font-size: 20px;*/
 }
 .blog-archive .blog-post .blog-info h2 a {
   text-decoration: none;
@@ -1342,21 +1268,21 @@ footer .copyrights a:hover {
   color: #828282;
 }
 .time svg {
-  font-size: 20px;
+  /*font-size: 20px;*/
   margin-bottom: 5px;
 }
 
 /* End blog-archive */
 /* Start Post */
 .page.post .share span {
-  font-size: 20px;
+  /*font-size: 20px;*/
 }
 .page.post .share a {
   width: 45px;
   height: 45px;
   background-color: #F2F2F2;
   border-radius: 50%;
-  font-size: 20px;
+  /*font-size: 20px;*/
   transition: 0.3s;
 }
 .page.post .share a:hover {
@@ -1392,7 +1318,7 @@ footer .copyrights a:hover {
   background-color: black;
 }
 .page.post p {
-  font-size: 20px;
+  /*font-size: 20px;*/
   line-height: 30px;
   margin-bottom: 30px;
 }
