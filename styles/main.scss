@@ -715,11 +715,19 @@ header {
 
   .services-holder {
     .service {
-      width: 262px;
-      height: 426px;
+      // width: 262px;
+      // height: 426px;
+      @include responsive(262px, 130px, width, 262px);
+      @include responsive(426px, 300px, height, 426px);
+
+      @include breakpoints_md() {
+        width: 262px;
+        height: 426px;
+      }
+
       padding: 25px 19px;
       transition-duration: $transitionDuration;
-      transform: scale(0);
+      // transform: scale(0);
 
       .service-icon {
         position: relative;
@@ -758,7 +766,13 @@ header {
 
     a {
       width: 262px;
-      transform: translateX(-1000px);
+      display: flex !important;
+      // transform: translateX(-1000px);
+      @include responsive(262px, 130px, width, 262px);
+
+      @include breakpoints_md() {
+        width: 262px;
+      }
     }
 
     &.marg {
@@ -1524,6 +1538,3 @@ footer {
 }
 
 /* End Post */
-body {
-  display: none;
-}

@@ -1358,11 +1358,87 @@ header .container .socials .nav-link svg {
 }
 .services .services-holder .service,
 .services-services .services-holder .service {
-  width: 262px;
-  height: 426px;
   padding: 25px 19px;
   transition-duration: 0.3s;
-  transform: scale(0);
+}
+@media (max-width: 576px) {
+  .services .services-holder .service,
+  .services-services .services-holder .service {
+    width: 262px;
+  }
+}
+@media (min-width: 576px) {
+  .services .services-holder .service,
+  .services-services .services-holder .service {
+    width: 130px;
+  }
+}
+@media (min-width: 768px) {
+  .services .services-holder .service,
+  .services-services .services-holder .service {
+    width: 160.7572815534px;
+  }
+}
+@media (min-width: 992px) {
+  .services .services-holder .service,
+  .services-services .services-holder .service {
+    width: 196.640776699px;
+  }
+}
+@media (min-width: 1200px) {
+  .services .services-holder .service,
+  .services-services .services-holder .service {
+    width: 229.9611650485px;
+  }
+}
+@media (min-width: 1400px) {
+  .services .services-holder .service,
+  .services-services .services-holder .service {
+    width: 262px;
+  }
+}
+@media (max-width: 576px) {
+  .services .services-holder .service,
+  .services-services .services-holder .service {
+    height: 426px;
+  }
+}
+@media (min-width: 576px) {
+  .services .services-holder .service,
+  .services-services .services-holder .service {
+    height: 300px;
+  }
+}
+@media (min-width: 768px) {
+  .services .services-holder .service,
+  .services-services .services-holder .service {
+    height: 329.359223301px;
+  }
+}
+@media (min-width: 992px) {
+  .services .services-holder .service,
+  .services-services .services-holder .service {
+    height: 363.6116504854px;
+  }
+}
+@media (min-width: 1200px) {
+  .services .services-holder .service,
+  .services-services .services-holder .service {
+    height: 395.4174757282px;
+  }
+}
+@media (min-width: 1400px) {
+  .services .services-holder .service,
+  .services-services .services-holder .service {
+    height: 426px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991) {
+  .services .services-holder .service,
+  .services-services .services-holder .service {
+    width: 262px;
+    height: 426px;
+  }
 }
 .services .services-holder .service .service-icon,
 .services-services .services-holder .service .service-icon {
@@ -1401,7 +1477,49 @@ header .container .socials .nav-link svg {
 .services .services-holder a,
 .services-services .services-holder a {
   width: 262px;
-  transform: translateX(-1000px);
+  display: flex !important;
+}
+@media (max-width: 576px) {
+  .services .services-holder a,
+  .services-services .services-holder a {
+    width: 262px;
+  }
+}
+@media (min-width: 576px) {
+  .services .services-holder a,
+  .services-services .services-holder a {
+    width: 130px;
+  }
+}
+@media (min-width: 768px) {
+  .services .services-holder a,
+  .services-services .services-holder a {
+    width: 160.7572815534px;
+  }
+}
+@media (min-width: 992px) {
+  .services .services-holder a,
+  .services-services .services-holder a {
+    width: 196.640776699px;
+  }
+}
+@media (min-width: 1200px) {
+  .services .services-holder a,
+  .services-services .services-holder a {
+    width: 229.9611650485px;
+  }
+}
+@media (min-width: 1400px) {
+  .services .services-holder a,
+  .services-services .services-holder a {
+    width: 262px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991) {
+  .services .services-holder a,
+  .services-services .services-holder a {
+    width: 262px;
+  }
 }
 .services .services-holder.marg,
 .services-services .services-holder.marg {
@@ -2096,7 +2214,4 @@ footer .copyrights a:hover {
   }
 }
 
-/* End Post */
-body {
-  display: none;
-}/*# sourceMappingURL=main.css.map */
+/* End Post *//*# sourceMappingURL=main.css.map */
