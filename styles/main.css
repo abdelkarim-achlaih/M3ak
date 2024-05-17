@@ -319,9 +319,25 @@ ul {
   padding-right: 0;
 }
 
+.container {
+  border: 1px solid red;
+}
 @media (min-width: 1400px) {
   .container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
     max-width: 1600px;
+  }
+}
+@media (max-width: 1399px) {
+  .container {
+    max-width: unset !important;
+  }
+}
+@media (max-width: 991px) {
+  .container {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
   }
 }
 

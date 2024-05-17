@@ -54,8 +54,21 @@ ul {
 }
 
 .container {
+  border: 1px solid red;
+
   @include breakpoints_xxl() {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
     max-width: 1600px;
+  }
+
+  @include breakpoints('xl') {
+    max-width: unset !important;
+  }
+
+  @include breakpoints('md') {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
   }
 }
 
