@@ -1284,9 +1284,6 @@ header .container .socials .nav-link svg {
   margin-top: 100px;
   overflow: hidden;
 }
-.how .section-title h2 {
-  /*@include font-size(32px)*/
-}
 .how .steps .step {
   max-width: 300px;
 }
@@ -1297,6 +1294,36 @@ header .container .socials .nav-link svg {
   height: 127px;
   background-color: #FC9918;
   border-radius: 16px;
+}
+@media (max-width: 576px) {
+  .how .steps .step .number {
+    font-size: 30px;
+  }
+}
+@media (min-width: 576px) {
+  .how .steps .step .number {
+    font-size: 30px;
+  }
+}
+@media (min-width: 768px) {
+  .how .steps .step .number {
+    font-size: 34.1941747573px;
+  }
+}
+@media (min-width: 992px) {
+  .how .steps .step .number {
+    font-size: 39.0873786408px;
+  }
+}
+@media (min-width: 1200px) {
+  .how .steps .step .number {
+    font-size: 43.6310679612px;
+  }
+}
+@media (min-width: 1400px) {
+  .how .steps .step .number {
+    font-size: 48px;
+  }
 }
 .how .steps .step p {
   padding-right: 8px;

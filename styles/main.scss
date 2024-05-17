@@ -612,20 +612,13 @@ header {
   margin-top: 100px;
   overflow: hidden;
 
-  .section-title {
-    h2 {
-      /*@include font-size(32px)*/
-
-
-    }
-  }
-
   .steps {
     .step {
       max-width: 300px;
 
       .number {
         /*@include font-size(48px);*/
+        @include responsive(48px, 30px, font-size);
         color: white;
         width: 127px;
         height: 127px;
