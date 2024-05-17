@@ -54,7 +54,7 @@ ul {
 }
 
 .container {
-  border: 1px solid red;
+  // border: 1px solid red;
 
   @include breakpoints_xxl() {
     padding-left: 40px !important;
@@ -878,6 +878,20 @@ $classes: one, two, three, four, five, six, seven, eight;
 
     @include breakpoints("md") {
       padding: 35px 26px;
+    }
+  }
+
+  &.about {
+    .text-copy {
+      @include breakpoints("md") {
+        padding-bottom: 0;
+      }
+    }
+
+    .img-holder {
+      @include breakpoints("md") {
+        padding-top: 0;
+      }
     }
   }
 
