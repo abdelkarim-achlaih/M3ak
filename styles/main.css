@@ -2081,7 +2081,7 @@ footer .copyrights a:hover {
     margin-right: auto;
     margin-left: auto;
     margin-top: -150px;
-    width: 80%;
+    width: 90%;
   }
 }
 .provider-cta .left .holder h2 {
@@ -2097,6 +2097,8 @@ footer .copyrights a:hover {
 @media (max-width: 767px) {
   .provider-cta .left .holder h2 {
     text-align: center;
+    font-size: 24px;
+    line-height: 40px;
   }
 }
 

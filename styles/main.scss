@@ -1207,7 +1207,8 @@ footer {
       margin-right: auto;
       margin-left: auto;
       margin-top: -150px;
-      width: 80%;
+      width: 90%;
+
     }
 
     h2 {
@@ -1222,7 +1223,8 @@ footer {
 
       @include breakpoints('sm') {
         text-align: center;
-
+        font-size: 24px;
+        line-height: 40px;
       }
     }
   }
