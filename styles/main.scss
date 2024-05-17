@@ -824,15 +824,15 @@ $classes: one, two, three, four, five, six, seven, eight;
   }
 
   .btn {
-    transform: translateX(1000px);
+    // transform: translateX(1000px);
   }
 
   .text-copy,
   .img-holder {
-    padding: 73px 63px;
+    padding: 73px 63px 0;
 
     @include breakpoints("md") {
-      padding: 35px 26px 17px;
+      padding: 35px 26px;
     }
   }
 

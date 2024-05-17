@@ -1641,17 +1641,14 @@ header .container .socials .nav-link svg {
   background-repeat: no-repeat;
   background-position: center center;
 }
-.provider .btn {
-  transform: translateX(1000px);
-}
 .provider .text-copy,
 .provider .img-holder {
-  padding: 73px 63px;
+  padding: 73px 63px 0;
 }
 @media (max-width: 991px) {
   .provider .text-copy,
   .provider .img-holder {
-    padding: 35px 26px 17px;
+    padding: 35px 26px;
   }
 }
 .provider h2 {
