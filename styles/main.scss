@@ -1293,6 +1293,20 @@ footer {
       transform: translate(50%, -50%);
 
     }
+
+    @include breakpoints('md') {
+      padding-right: unset;
+
+      &::after {
+        left: 50%;
+        right: unset;
+        height: 5px;
+        width: 43px;
+        top: unset;
+        transform: translateX(-50%);
+        bottom: -20px;
+      }
+    }
   }
 }
 
