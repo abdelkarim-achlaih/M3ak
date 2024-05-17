@@ -136,10 +136,10 @@ $xxl-breakpoint: map-get($breakpoints, xxl);
 
 $sm-breakpoint: map-get($breakpoints, sm);
 
-@mixin responsive($xxl-values, $sm-values, $property-name) {
+@mixin responsive($xxl-values, $sm-values, $property-name, $mobile-values: $sm-values) {
 
   @media (max-width: $sm-breakpoint) {
-    #{$property-name}: #{concatenate-list($sm-values, " ")};
+    #{$property-name}: #{concatenate-list($mobile-values, " ")};
   }
 
   @each $breakpoint_name,

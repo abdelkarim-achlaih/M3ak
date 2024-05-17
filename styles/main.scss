@@ -41,8 +41,8 @@ body {
 }
 
 *::selection {
-  // color: $back2;
-  // background-color: $main;
+  color: white;
+  background-color: $mainYellow;
 }
 
 @include responsive-font-size();
@@ -53,9 +53,9 @@ ul {
   padding-right: 0;
 }
 
-.container-xxl {
-  @include breakpoints('xxl') {
-    max-width: 1800px;
+.container {
+  @include breakpoints_xxl() {
+    max-width: 1700px;
   }
 }
 
@@ -76,8 +76,9 @@ a.btn,
   // /*font-size: 24px;*/
   /*/*@include font-size(24px)*/
   // padding: 23px 21px;
-  @include responsive((20px, 10px), (5px, 10px), padding);
-  @include responsive(20px, 14px, font-size);
+  font-size: unset !important;
+  @include responsive((20px, 20px), (10px, 20px), padding);
+  @include responsive(20px, 15px, font-size);
   transition: $transitionDuration;
   border-radius: 16px;
 
@@ -194,7 +195,7 @@ header {
   // padding-bottom: 53px;
   overflow: hidden;
 
-  .container-xxl {
+  .container {
 
     .navbar-brand {
       img {
@@ -208,6 +209,7 @@ header {
         color: rgba(108, 108, 108, 1);
         // /*font-size: 24px;*/
         /*/*@include font-size(24px)*/
+        @include responsive(20px, 14px, font-size, 16px);
         transition: $transitionDuration;
         position: relative;
 
@@ -237,10 +239,19 @@ header {
     }
 
     .socials {
+      button.btn {
+        font-size: unset !important;
+        @include responsive((20px, 10px), (5px, 10px), padding);
+        @include responsive(20px, 13px, font-size);
+      }
 
       .nav-link {
-        @include responsive(48px, 25px, width);
-        @include responsive(48px, 25px, height);
+        // @include responsive(48px, 25px, width);
+        // @include responsive(48px, 25px, height);
+        @include responsive(48px,
+          20px, width, 25px);
+        @include responsive(48px,
+          20px, height, 25px);
         background-color: transparent;
         background-image: $mainGradientYellow;
         border-radius: 50%;
@@ -254,7 +265,7 @@ header {
         svg {
           // font-size: 22px;
           // @include font-size(22px);
-          @include responsive(22px, 15px, font-size);
+          @include responsive(22px, 14px, font-size, 15px);
           color: white;
         }
       }
@@ -272,7 +283,7 @@ header {
 
   }
 
-  .container-xxl {
+  .container {
     position: relative;
 
     .hero-bg {
@@ -547,10 +558,11 @@ header {
     .col-holder {
       position: relative;
       width: fit-content;
+      height: fit-content;
 
       .stats {
         position: absolute;
-        bottom: 50px;
+        bottom: 70px;
         right: 0;
         transform: translateX(50%);
         background-color: #212936;
@@ -558,7 +570,7 @@ header {
         border-radius: 8px;
         color: white;
 
-        @include breakpoints("md") {
+        @include breakpoints("lg") {
           bottom: 0;
           right: 50%;
           transform: translate(50%, 50%);
