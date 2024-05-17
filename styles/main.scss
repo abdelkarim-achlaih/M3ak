@@ -57,12 +57,14 @@ ul {
   border: 1px solid red;
 
   @include breakpoints_xxl() {
-    padding-left: 20px !important;
-    padding-right: 20px !important;
+    padding-left: 40px !important;
+    padding-right: 40px !important;
     max-width: 1600px;
   }
 
   @include breakpoints('xl') {
+    padding-left: 40px !important;
+    padding-right: 40px !important;
     max-width: unset !important;
   }
 
@@ -861,7 +863,13 @@ $classes: one, two, three, four, five, six, seven, eight;
   }
 
   .btn {
+
     // transform: translateX(1000px);
+    @include breakpoints('sm') {
+      margin-left: auto !important;
+      margin-right: auto !important;
+      width: fit-content;
+    }
   }
 
   .text-copy,
@@ -876,6 +884,14 @@ $classes: one, two, three, four, five, six, seven, eight;
   h2 {
     // font-size: 48px;
     line-height: 150%;
+
+    @include breakpoints('md') {
+      text-align: unset !important;
+    }
+
+    @include breakpoints('sm') {
+      text-align: center !important;
+    }
   }
 
   &.about,
@@ -892,6 +908,7 @@ $classes: one, two, three, four, five, six, seven, eight;
 
       // font-size: 40px;
       @include responsive(36px, 24px, font-size);
+
 
       span {
         color: $mainYellow;

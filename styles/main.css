@@ -324,13 +324,15 @@ ul {
 }
 @media (min-width: 1400px) {
   .container {
-    padding-left: 20px !important;
-    padding-right: 20px !important;
+    padding-left: 40px !important;
+    padding-right: 40px !important;
     max-width: 1600px;
   }
 }
 @media (max-width: 1399px) {
   .container {
+    padding-left: 40px !important;
+    padding-right: 40px !important;
     max-width: unset !important;
   }
 }
@@ -1762,6 +1764,14 @@ header .container .socials .nav-link svg {
   background-repeat: no-repeat;
   background-position: center center;
 }
+@media (max-width: 767px) {
+  .provider .btn {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
 .provider .text-copy,
 .provider .img-holder {
   padding: 73px 63px 0;
@@ -1774,6 +1784,16 @@ header .container .socials .nav-link svg {
 }
 .provider h2 {
   line-height: 150%;
+}
+@media (max-width: 991px) {
+  .provider h2 {
+    text-align: unset !important;
+  }
+}
+@media (max-width: 767px) {
+  .provider h2 {
+    text-align: center !important;
+  }
 }
 .provider.about, .provider.services-page {
   margin-top: unset;
