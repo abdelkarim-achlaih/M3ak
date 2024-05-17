@@ -1283,7 +1283,7 @@ footer {
 
   h1 {
     padding-right: 40px;
-    font-size: 40px;
+    // font-size: 40px;
 
     &::after {
       height: 43px;
@@ -1312,7 +1312,6 @@ footer {
   }
 
   h2 {
-    font-size: 40px;
 
     span {
       color: $mainYellow;
@@ -1368,7 +1367,6 @@ footer {
 
       input,
       textarea {
-        max-width: 788px;
 
         @include breakpoints('md') {
           max-width: unset;
@@ -1385,7 +1383,6 @@ footer {
       }
 
       button {
-        max-width: 788px;
         /*font-size: 20px;*/
 
         @include breakpoints('md') {

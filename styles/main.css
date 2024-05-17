@@ -2149,7 +2149,6 @@ footer .copyrights a:hover {
 }
 .page-title h1 {
   padding-right: 40px;
-  font-size: 40px;
 }
 .page-title h1::after {
   height: 43px;
@@ -2172,9 +2171,6 @@ footer .copyrights a:hover {
   top: 0;
   right: 0;
   z-index: -1;
-}
-.contact h2 {
-  font-size: 40px;
 }
 .contact h2 span {
   color: #FFAF04;
@@ -2214,7 +2210,6 @@ footer .copyrights a:hover {
 }
 .contact .form form input,
 .contact .form form textarea {
-  max-width: 788px;
   background-color: #FBFBFB;
   border-color: #E0E0E0;
 }
@@ -2231,7 +2226,6 @@ footer .copyrights a:hover {
   box-shadow: none;
 }
 .contact .form form button {
-  max-width: 788px;
   /*font-size: 20px;*/
 }
 @media (max-width: 991px) {
