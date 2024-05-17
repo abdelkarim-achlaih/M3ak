@@ -1449,42 +1449,6 @@ header .container .socials .nav-link svg {
 @media (max-width: 576px) {
   .services .services-holder .service,
   .services-services .services-holder .service {
-    width: 262px;
-  }
-}
-@media (min-width: 576px) {
-  .services .services-holder .service,
-  .services-services .services-holder .service {
-    width: 130px;
-  }
-}
-@media (min-width: 768px) {
-  .services .services-holder .service,
-  .services-services .services-holder .service {
-    width: 160.7572815534px;
-  }
-}
-@media (min-width: 992px) {
-  .services .services-holder .service,
-  .services-services .services-holder .service {
-    width: 196.640776699px;
-  }
-}
-@media (min-width: 1200px) {
-  .services .services-holder .service,
-  .services-services .services-holder .service {
-    width: 229.9611650485px;
-  }
-}
-@media (min-width: 1400px) {
-  .services .services-holder .service,
-  .services-services .services-holder .service {
-    width: 262px;
-  }
-}
-@media (max-width: 576px) {
-  .services .services-holder .service,
-  .services-services .services-holder .service {
     height: 426px;
   }
 }
@@ -1521,7 +1485,6 @@ header .container .socials .nav-link svg {
 @media (min-width: 768px) and (max-width: 991) {
   .services .services-holder .service,
   .services-services .services-holder .service {
-    width: 262px;
     height: 426px;
   }
 }
@@ -1621,12 +1584,69 @@ header .container .socials .nav-link svg {
   height: 231px;
   border-radius: 32px;
 }
+@media (max-width: 576px) {
+  .services .services-holder.marg .service,
+  .services-services .services-holder.marg .service {
+    width: 262px;
+  }
+}
+@media (min-width: 576px) {
+  .services .services-holder.marg .service,
+  .services-services .services-holder.marg .service {
+    width: 130px;
+  }
+}
+@media (min-width: 768px) {
+  .services .services-holder.marg .service,
+  .services-services .services-holder.marg .service {
+    width: 160.7572815534px;
+  }
+}
+@media (min-width: 992px) {
+  .services .services-holder.marg .service,
+  .services-services .services-holder.marg .service {
+    width: 196.640776699px;
+  }
+}
+@media (min-width: 1200px) {
+  .services .services-holder.marg .service,
+  .services-services .services-holder.marg .service {
+    width: 229.9611650485px;
+  }
+}
+@media (min-width: 1400px) {
+  .services .services-holder.marg .service,
+  .services-services .services-holder.marg .service {
+    width: 262px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991) {
+  .services .services-holder.marg .service,
+  .services-services .services-holder.marg .service {
+    width: 262px;
+  }
+}
 .services .services-holder.serv .service,
 .services-services .services-holder.serv .service {
   border-top-left-radius: 241px 76px;
   border-top-right-radius: 50px;
   border-bottom-right-radius: 241px 76px;
   border-bottom-left-radius: 50px;
+}
+@media (max-width: 575px) {
+  .services .services-holder.serv .service,
+  .services-services .services-holder.serv .service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+  }
+  .services .services-holder.serv .service:hover .service-icon,
+  .services-services .services-holder.serv .service:hover .service-icon {
+    right: unset;
+    transform: unset;
+  }
 }
 
 .page.services {
@@ -1814,6 +1834,11 @@ header .container .socials .nav-link svg {
 }
 .provider.about .badges a img:hover, .provider.services-page .badges a img:hover {
   transform: scale(1.05);
+}
+@media (max-width: 991px) {
+  .provider.services-page img {
+    height: 250px;
+  }
 }
 
 /* End Provider */
