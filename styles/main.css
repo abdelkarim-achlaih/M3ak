@@ -321,7 +321,7 @@ ul {
 
 @media (min-width: 1400px) {
   .container {
-    max-width: 1700px;
+    max-width: 1600px;
   }
 }
 
@@ -1661,14 +1661,71 @@ header .container .socials .nav-link svg {
   border-radius: 30px;
   background-image: linear-gradient(177.39deg, #FEF4EC 1.94%, rgba(254, 244, 236, 0) 97.6%);
 }
-.provider.about h2, .provider.services-page h2 {
-  font-size: 40px;
+@media (max-width: 576px) {
+  .provider.about h2, .provider.services-page h2 {
+    font-size: 24px;
+  }
+}
+@media (min-width: 576px) {
+  .provider.about h2, .provider.services-page h2 {
+    font-size: 24px;
+  }
+}
+@media (min-width: 768px) {
+  .provider.about h2, .provider.services-page h2 {
+    font-size: 26.7961165049px;
+  }
+}
+@media (min-width: 992px) {
+  .provider.about h2, .provider.services-page h2 {
+    font-size: 30.0582524272px;
+  }
+}
+@media (min-width: 1200px) {
+  .provider.about h2, .provider.services-page h2 {
+    font-size: 33.0873786408px;
+  }
+}
+@media (min-width: 1400px) {
+  .provider.about h2, .provider.services-page h2 {
+    font-size: 36px;
+  }
 }
 .provider.about h2 span, .provider.services-page h2 span {
   color: #FFAF04;
 }
 .provider.about .badges a img, .provider.services-page .badges a img {
   transition: 0.3s;
+}
+@media (max-width: 576px) {
+  .provider.about .badges a img, .provider.services-page .badges a img {
+    width: 120px;
+  }
+}
+@media (min-width: 576px) {
+  .provider.about .badges a img, .provider.services-page .badges a img {
+    width: 120px;
+  }
+}
+@media (min-width: 768px) {
+  .provider.about .badges a img, .provider.services-page .badges a img {
+    width: 138.640776699px;
+  }
+}
+@media (min-width: 992px) {
+  .provider.about .badges a img, .provider.services-page .badges a img {
+    width: 160.3883495146px;
+  }
+}
+@media (min-width: 1200px) {
+  .provider.about .badges a img, .provider.services-page .badges a img {
+    width: 180.5825242718px;
+  }
+}
+@media (min-width: 1400px) {
+  .provider.about .badges a img, .provider.services-page .badges a img {
+    width: 200px;
+  }
 }
 .provider.about .badges a img:hover, .provider.services-page .badges a img:hover {
   transform: scale(1.05);

@@ -55,7 +55,7 @@ ul {
 
 .container {
   @include breakpoints_xxl() {
-    max-width: 1700px;
+    max-width: 1600px;
   }
 }
 
@@ -852,7 +852,9 @@ $classes: one, two, three, four, five, six, seven, eight;
     }
 
     h2 {
-      font-size: 40px;
+
+      // font-size: 40px;
+      @include responsive(36px, 24px, font-size);
 
       span {
         color: $mainYellow;
@@ -861,6 +863,7 @@ $classes: one, two, three, four, five, six, seven, eight;
 
     .badges {
       a img {
+        @include responsive(200px, 120px, width);
         transition: $transitionDuration;
 
         &:hover {
