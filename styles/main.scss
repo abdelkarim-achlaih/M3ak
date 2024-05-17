@@ -881,7 +881,8 @@ $classes: one, two, three, four, five, six, seven, eight;
     }
   }
 
-  &.about {
+  &.about,
+  &.services-page {
     .text-copy {
       @include breakpoints("md") {
         padding-bottom: 0;

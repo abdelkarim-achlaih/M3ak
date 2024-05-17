@@ -1780,12 +1780,12 @@ header .container .socials .nav-link svg {
   }
 }
 @media (max-width: 991px) {
-  .provider.about .text-copy {
+  .provider.about .text-copy, .provider.services-page .text-copy {
     padding-bottom: 0;
   }
 }
 @media (max-width: 991px) {
-  .provider.about .img-holder {
+  .provider.about .img-holder, .provider.services-page .img-holder {
     padding-top: 0;
   }
 }
