@@ -485,11 +485,14 @@ header {
     .feature-icon {
       background-image: none;
       background-color: #FDE7D0;
-      width: 207px;
-      height: 207px;
+      // width: 207px;
+      // height: 207px;
+      @include responsive(207px, 120px, width);
+      @include responsive(207px, 120px, height);
 
       img {
-        width: 50px;
+        // width: 50px;
+        @include responsive(50px, 25px, width)
       }
     }
   }
