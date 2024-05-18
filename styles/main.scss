@@ -292,9 +292,11 @@ header {
 /* Start Hero */
 .hero {
   height: calc(100vh - 110px);
+  max-height: 700px;
 
   @include breakpoints("md") {
     height: auto;
+    max-height: unset;
 
   }
 
@@ -302,10 +304,6 @@ header {
     position: relative;
 
     .hero-bg {
-      background-image: url('../assets/img/Hero_bg.png');
-      background-size: 100% 100%;
-      background-repeat: no-repeat;
-      background-position: center center;
       position: absolute;
       top: 0;
       left: 0;
@@ -315,6 +313,10 @@ header {
     }
 
     .section-container {
+      background-image: url('../assets/img/Hero_bg.png');
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      background-position: center center;
       padding: 72px;
       position: relative;
       z-index: 100;
@@ -366,6 +368,7 @@ header {
           left: 0;
           width: 100%;
           height: 75vh;
+          max-height: 650px;
           @include responsive(75vh, 50vh, height);
 
           @include breakpoints("md") {
@@ -379,8 +382,10 @@ header {
           z-index: 300;
 
           .floating-box {
-            width: 40vh;
-            height: 40vh;
+            // width: 40vh;
+            // height: 40vh;
+            @include responsive(304px, 160px, height);
+            @include responsive(304px, 160px, width);
             max-width: 304px;
             max-height: 304px;
             position: absolute;
@@ -402,7 +407,8 @@ header {
 
           img {
             // height: 75vh;
-            @include responsive(75vh, 50vh, height)
+            @include responsive(75vh, 50vh, height);
+            max-height: 650px;
           }
         }
       }
@@ -544,7 +550,13 @@ header {
 /* Start About */
 .about {
   overflow: hidden;
+  // margin-top: 100px;
   margin-top: 100px;
+
+  @include breakpoints('md') {
+    margin-top: unset;
+
+  }
 
   .text-copy {
 
@@ -631,6 +643,25 @@ header {
   overflow: hidden;
 
   .steps {
+    .colmun-one {
+      align-content: end;
+      flex-wrap: wrap;
+      height: 100%;
+
+      .step {
+        margin-left: -50px;
+      }
+
+      @include breakpoints('md') {
+        flex-wrap: nowrap;
+
+        .step {
+          margin-left: unset;
+        }
+      }
+
+    }
+
     .step {
       max-width: 300px;
 
@@ -860,6 +891,7 @@ $classes: one, two, three, four, five, six, seven, eight;
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center center;
+    overflow: hidden;
   }
 
   .btn {
